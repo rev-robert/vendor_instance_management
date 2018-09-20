@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Vendor Instance" max_length="40" name="x_275826_vim_vendor_instance" type="collection">
+    <element audit="true" label="Vendor Instance" max_length="40" name="x_275826_vim_vendor_instance" type="collection">
         <element label="Admin password" max_length="512" name="admin_password" type="password2"/>
         <element default="admin" label="Admin user" mandatory="true" max_length="40" name="admin_user" type="string"/>
         <element label="Checked out" max_length="40" name="checked_out" type="boolean"/>
         <element label="Current configuration" max_length="4000" name="current_configuration" type="html"/>
+        <element label="Instance notes" max_length="4000" name="instance_notes" type="journal"/>
         <element label="Last clone" max_length="40" name="last_clone" type="glide_date_time"/>
         <element label="Last clone source" max_length="32" name="last_clone_source" reference="instance" type="reference"/>
         <element label="Last zboot" max_length="40" name="last_zboot" type="glide_date_time"/>

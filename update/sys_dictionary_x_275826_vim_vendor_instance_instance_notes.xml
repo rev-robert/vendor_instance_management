@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_275826_vim_vendor_instance">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="instance_notes" table="x_275826_vim_vendor_instance">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
         <attributes/>
-        <audit>true</audit>
+        <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
 	// Add your code here
@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label/>
+        <column_label>Instance notes</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -27,14 +27,14 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element/>
+        <element>instance_notes</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Collection">collection</internal_type>
+        <internal_type display_value="Journal">journal</internal_type>
         <mandatory>false</mandatory>
-        <max_length>40</max_length>
+        <max_length>4000</max_length>
         <name>x_275826_vim_vendor_instance</name>
         <next_element/>
         <primary>false</primary>
@@ -52,16 +52,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-20 17:13:21</sys_created_on>
-        <sys_id>c246c9abdbac23007c857fcfbf96199f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>x_275826_vim_vendor_instance</sys_name>
+        <sys_created_on>2018-09-20 18:35:01</sys_created_on>
+        <sys_id>55d8d1a7dbec23007c857fcfbf9619b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Instance notes</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy/>
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
-        <sys_update_name>sys_dictionary_x_275826_vim_vendor_instance_null</sys_update_name>
+        <sys_update_name>sys_dictionary_x_275826_vim_vendor_instance_instance_notes</sys_update_name>
         <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-20 18:40:06</sys_updated_on>
+        <sys_updated_on>2018-09-20 18:35:01</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
