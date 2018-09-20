@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="task" table="x_275826_vim_vendor_instance_checkout">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="vendor_instance" table="x_275826_vim_vendor_instance_checkout_request">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Project or task</column_label>
+        <column_label>Vendor Instance</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -27,20 +27,20 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>task</element>
+        <element>vendor_instance</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
         <internal_type display_value="Reference">reference</internal_type>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <max_length>32</max_length>
-        <name>x_275826_vim_vendor_instance_checkout</name>
+        <name>x_275826_vim_vendor_instance_checkout_request</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="Task" name="task">task</reference>
+        <reference display_value="" name="x_275826_vim_vendor_instance">x_275826_vim_vendor_instance</reference>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -52,16 +52,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-20 18:28:45</sys_created_on>
-        <sys_id>35679167dbec23007c857fcfbf96195a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Project or task</sys_name>
+        <sys_created_on>2018-09-20 20:24:19</sys_created_on>
+        <sys_id>eed1352bdb2063007c857fcfbf96192a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vendor Instance</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy/>
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
-        <sys_update_name>sys_dictionary_x_275826_vim_vendor_instance_checkout_task</sys_update_name>
+        <sys_update_name>sys_dictionary_x_275826_vim_vendor_instance_checkout_request_vendor_instance</sys_update_name>
         <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-20 20:30:50</sys_updated_on>
+        <sys_updated_on>2018-09-20 20:24:19</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

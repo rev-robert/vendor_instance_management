@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <hint/>
+        <name>Vendor Instance Management</name>
+        <order/>
+        <roles>x_275826_vim.vendor_instance_manager</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>robert.polickoski</sys_created_by>
+        <sys_created_on>2018-09-20 20:14:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bcbfe5a7db2063007c857fcfbf96199a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vendor Instance Management</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_update_name>sys_ui_application_bcbfe5a7db2063007c857fcfbf96199a</sys_update_name>
+        <sys_updated_by>robert.polickoski</sys_updated_by>
+        <sys_updated_on>2018-09-20 20:14:19</sys_updated_on>
+    </sys_ui_application>
+</record_update>

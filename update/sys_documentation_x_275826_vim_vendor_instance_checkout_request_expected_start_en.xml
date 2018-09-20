@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="expected_start" label="Desired checkout date" language="en" table="x_275826_vim_vendor_instance_checkout_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>expected_start</element>
+            <help/>
+            <hint/>
+            <label>Desired checkout date</label>
+            <language>en</language>
+            <name>x_275826_vim_vendor_instance_checkout_request</name>
+            <plural>Desired checkout dates</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>robert.polickoski</sys_created_by>
+            <sys_created_on>2018-09-20 20:26:28</sys_created_on>
+            <sys_id>cc62b92bdb2063007c857fcfbf9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Desired checkout date</sys_name>
+            <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+            <sys_update_name>sys_documentation_x_275826_vim_vendor_instance_checkout_request_expected_start_en</sys_update_name>
+            <sys_updated_by>robert.polickoski</sys_updated_by>
+            <sys_updated_on>2018-09-20 20:26:28</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
