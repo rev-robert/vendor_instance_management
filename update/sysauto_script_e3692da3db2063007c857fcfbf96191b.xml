@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Checkout Vendor Instance</name>
+        <run_as display_value="Robert Polickoski">3967c8d1db2023007c857fcfbf961957</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-01 01:00:00</run_period>
+        <run_start>2018-09-20 19:46:55</run_start>
+        <run_time>1970-01-01 06:00:00</run_time>
+        <run_type>periodically</run_type>
+        <script><![CDATA[/******************************************************************
+*******************************************************************
+*  Sets Vendor Instances as Checked out if a Vendor Instance      *
+*  Checkout Checkout date is within the threshold set             *
+*******************************************************************
+******************************************************************/
+var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
+grVIC.addEncodedQuery("vendor_instance.checked_out=false^checkout_dateRELATIVELE@minute@ahead@" + gs.getProperty('x_275826_vim.vendor_instance_checkout_threshold').toString());
+grVIC.query();
+while (grVIC.next()) {
+	var grVI = new GlideRecord('x_275826_vim_vendor_instance');
+	grVI.get(grVIC.vendor_instance.toString());
+	grVI.setValue('checked_out', true);
+	grVI.update();
+}  // while (grVIC.next())
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>robert.polickoski</sys_created_by>
+        <sys_created_on>2018-09-20 19:49:25</sys_created_on>
+        <sys_id>e3692da3db2063007c857fcfbf96191b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Checkout Vendor Instance</sys_name>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_update_name>sysauto_script_e3692da3db2063007c857fcfbf96191b</sys_update_name>
+        <sys_updated_by>robert.polickoski</sys_updated_by>
+        <sys_updated_on>2018-09-20 19:49:25</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
