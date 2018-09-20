@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_275826_vim.vendor_instance_manager</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>vendor_instance_manager</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>robert.polickoski</sys_created_by>
+        <sys_created_on>2018-09-20 17:13:20</sys_created_on>
+        <sys_id>f546416bdbac23007c857fcfbf9619c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_275826_vim.vendor_instance_manager</sys_name>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_update_name>sys_user_role_f546416bdbac23007c857fcfbf9619c4</sys_update_name>
+        <sys_updated_by>robert.polickoski</sys_updated_by>
+        <sys_updated_on>2018-09-20 17:13:20</sys_updated_on>
+    </sys_user_role>
+</record_update>

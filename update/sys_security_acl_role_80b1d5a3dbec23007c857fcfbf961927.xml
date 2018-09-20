@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>robert.polickoski</sys_created_by>
+        <sys_created_on>2018-09-20 18:03:11</sys_created_on>
+        <sys_id>80b1d5a3dbec23007c857fcfbf961927</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_275826_vim_vendor_instance_checkout.x_275826_vim.vendor_instance_user</sys_name>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_security_acl display_value="x_275826_vim_vendor_instance_checkout">c0b1d5a3dbec23007c857fcfbf961924</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_80b1d5a3dbec23007c857fcfbf961927</sys_update_name>
+        <sys_updated_by>robert.polickoski</sys_updated_by>
+        <sys_updated_on>2018-09-20 18:03:11</sys_updated_on>
+        <sys_user_role display_value="x_275826_vim.vendor_instance_user" name="x_275826_vim.vendor_instance_user">bc0c4dafdbac23007c857fcfbf9619e1</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

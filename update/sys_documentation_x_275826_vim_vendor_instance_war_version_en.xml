@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="war_version" label="War version" language="en" table="x_275826_vim_vendor_instance">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>war_version</element>
+            <help/>
+            <hint/>
+            <label>War version</label>
+            <language>en</language>
+            <name>x_275826_vim_vendor_instance</name>
+            <plural>War versions</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>robert.polickoski</sys_created_by>
+            <sys_created_on>2018-09-20 17:21:51</sys_created_on>
+            <sys_id>2638812fdbac23007c857fcfbf96196f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>War version</sys_name>
+            <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+            <sys_update_name>sys_documentation_x_275826_vim_vendor_instance_war_version_en</sys_update_name>
+            <sys_updated_by>robert.polickoski</sys_updated_by>
+            <sys_updated_on>2018-09-20 17:21:51</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
