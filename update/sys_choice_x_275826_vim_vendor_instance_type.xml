@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="type" table="x_275826_vim_vendor_instance" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Demo</label>
+            <language>en</language>
+            <name>x_275826_vim_vendor_instance</name>
+            <sequence>10</sequence>
+            <sys_created_by>robert.polickoski</sys_created_by>
+            <sys_created_on>2018-09-21 12:48:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c433593bdb2863007c857fcfbf961993</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>robert.polickoski</sys_updated_by>
+            <sys_updated_on>2018-09-21 12:48:27</sys_updated_on>
+            <value>demo</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Vendor</label>
+            <language>en</language>
+            <name>x_275826_vim_vendor_instance</name>
+            <sequence>20</sequence>
+            <sys_created_by>robert.polickoski</sys_created_by>
+            <sys_created_on>2018-09-21 12:48:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ee53993bdb2863007c857fcfbf96191e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>robert.polickoski</sys_updated_by>
+            <sys_updated_on>2018-09-21 12:48:56</sys_updated_on>
+            <value>vendor</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>type</element>
+            <name>x_275826_vim_vendor_instance</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>robert.polickoski</sys_created_by>
+            <sys_created_on>2018-09-21 12:48:27</sys_created_on>
+            <sys_id>2333dd73db2863007c857fcfbf9619be</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>type</sys_name>
+            <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+            <sys_update_name>sys_choice_x_275826_vim_vendor_instance_type</sys_update_name>
+            <sys_updated_by>robert.polickoski</sys_updated_by>
+            <sys_updated_on>2018-09-21 12:48:27</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

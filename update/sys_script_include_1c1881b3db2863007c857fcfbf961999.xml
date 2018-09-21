@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_275826_vim.VendorInstanceManagementUtils</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>VendorInstanceManagementUtils</name>
+        <script><![CDATA[var VendorInstanceManagementUtils = Class.create();
+VendorInstanceManagementUtils.prototype = {
+	/**************************************
+ 	***************************************
+ 	*  Utility functions for the Vendor   *
+ 	*  Instance Management Application    *
+ 	***************************************
+ 	**************************************/
+	initialize: function() {
+		this.log = new GSLog('com.snc.task.log','VendorInstanceManagementUtils');
+		this.msg = 'VendorInstanceManagementUtils initialized' + '\n';
+		/**************************************
+ 		*****      Activate Debugging     *****
+ 		**************************************/
+		this.debug = gs.getProperty('glide.installation.production') == true ? false : true;
+		/**************************************
+ 		**************************************/
+	},
+	
+	createCheckout: function (sidInstance  /* sys_id of vendor_instance */, sidUser  /* sys_id if sys_user */, gdtCheckout  /* GlideDateTime */, gdtCheckin  /* GlideDateTime */, sidTask  /* sys_id of task */) {
+		/**************************************
+ 		*****  Create a Vendor Instance   *****
+ 		*****  Checkout record            *****
+ 		**************************************/
+		this.msg += 'createCheckout(' + sidInstance.toString() + ', ' + sidUser.toString() + ', ' + gdtCheckout.getDisplayValue() + ', ' + gdtCheckin.getDisplayValue() + ', ' + sidTask.toString + ')' + '\n';
+		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
+		try {
+			grVIC.vendor_instance = sidInstance.toString();
+			grVIC.user = sidUser.toString();
+			grVIC.checkout_date = gdtCheckout.getValue();
+			if (gdtCheckin != undefined) {
+				grVIC.checkin_date = gdtCheckin.getValue();
+			}  // if (gdtCheckin != undefined)
+			if (sidTask != undefined) {
+				grVIC.task = sidTask.toString();
+			}  // if (gdtCheckin != undefined)
+			grVIC.update();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in createCheckout:  ' + err.message + '\n';
+			this.log.logErr();
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIC;
+		}  // finally
+	},  // createCheckout
+	
+	checkVendorInstanceAvailability: function (sidInstance  /* sys_id of vendor_instance */, gdtCheckout  /* GlideDateTime */, gdtCheckin  /* GlideDateTime */) {
+		/**************************************
+ 		*****  Check for Vendor Instance  *****
+ 		*****  availaibility within       *****
+ 		*****  provided dates             *****
+ 		**************************************/
+		this.msg += 'checkVendorInstanceAvailability(' + sidInstance.toString() + ', ' + gdtCheckout.getDisplayValue() + ', ' + gdtCheckin.getDisplayValue() + ')' + '\n';
+		var boolIsAvailable = true;
+		try {
+			var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
+			grVIC.addQuery('vendor_instance', sidInstance.toString());
+			grVIC.addEncodedQuery("checkin_dateISEMPTY^checkout_date<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')^NQcheckin_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')");
+			if (gdtCheckin != undefined) {
+				grVIC.addEncodedQuery("checkin_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')^ORcheckout_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')");
+			}  // if (gdtCheckin != undefined)
+			grVIC.query();
+			if (grVIC.getRowCount() > 0) {
+				boolIsAvailable = false;
+			}  // if (grVIC.getRowCount() > 0)
+			else {
+				var grVICR = new GlideRecord('x_275826_vim_vendor_instance_checkout_request');
+				grVICR.addQuery('vendor_instance', sidInstance.toString());
+				grVICR.addEncodedQuery("due_dateISEMPTY^expected_start<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')^NQdue_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')");
+				if (gdtCheckin != undefined) {
+					grVICR.addEncodedQuery("due_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')^ORexpected_startBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')");
+				}  // if (gdtCheckin != undefined)
+				grVICR.query();
+				if (grVICR.getRowCount() > 0) {
+					boolIsAvailable = false;
+				}  // if (grVICR.getRowCount() > 0)
+			}  // else if (grVIC.getRowCount() > 0)
+		}  // try
+		catch (err) {
+			this.msg += 'Error in checkVendorInstanceAvailability:  ' + err.message + '\n';
+			this.log.logErr();
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return boolIsAvailable;
+		}  // finally
+	},  // checkVendorInstanceAvailability
+	
+	type: 'VendorInstanceManagementUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>robert.polickoski</sys_created_by>
+        <sys_created_on>2018-09-21 13:19:06</sys_created_on>
+        <sys_id>1c1881b3db2863007c857fcfbf961999</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>VendorInstanceManagementUtils</sys_name>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_update_name>sys_script_include_1c1881b3db2863007c857fcfbf961999</sys_update_name>
+        <sys_updated_by>robert.polickoski</sys_updated_by>
+        <sys_updated_on>2018-09-21 16:34:56</sys_updated_on>
+    </sys_script_include>
+</record_update>

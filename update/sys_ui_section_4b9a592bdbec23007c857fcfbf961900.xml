@@ -4,27 +4,27 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>robert.polickoski</sys_created_by>
-            <sys_created_on>2018-09-20 18:43:13</sys_created_on>
-            <sys_id>12dadd2bdbec23007c857fcfbf96198d</sys_id>
+            <sys_created_on>2018-09-21 12:51:36</sys_created_on>
+            <sys_id>71f3917bdb2863007c857fcfbf961938</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Status" display_value="Status" name="x_275826_vim_vendor_instance" sys_domain="global" view="Default view">4b9a592bdbec23007c857fcfbf961900</sys_ui_section>
             <sys_updated_by>robert.polickoski</sys_updated_by>
-            <sys_updated_on>2018-09-20 18:43:13</sys_updated_on>
+            <sys_updated_on>2018-09-21 12:51:36</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>last_zboot</element>
+            <element>checked_out</element>
             <position>1</position>
             <sys_created_by>robert.polickoski</sys_created_by>
-            <sys_created_on>2018-09-20 18:43:13</sys_created_on>
-            <sys_id>d2dadd2bdbec23007c857fcfbf96198d</sys_id>
+            <sys_created_on>2018-09-21 12:51:36</sys_created_on>
+            <sys_id>f1f3917bdb2863007c857fcfbf961938</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Status" display_value="Status" name="x_275826_vim_vendor_instance" sys_domain="global" view="Default view">4b9a592bdbec23007c857fcfbf961900</sys_ui_section>
             <sys_updated_by>robert.polickoski</sys_updated_by>
-            <sys_updated_on>2018-09-20 18:43:13</sys_updated_on>
+            <sys_updated_on>2018-09-21 12:51:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>last_clone</element>
             <position>2</position>
             <sys_created_by>robert.polickoski</sys_created_by>
-            <sys_created_on>2018-09-20 18:43:13</sys_created_on>
-            <sys_id>56dadd2bdbec23007c857fcfbf96198d</sys_id>
+            <sys_created_on>2018-09-21 12:51:36</sys_created_on>
+            <sys_id>75f3917bdb2863007c857fcfbf961938</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Status" display_value="Status" name="x_275826_vim_vendor_instance" sys_domain="global" view="Default view">4b9a592bdbec23007c857fcfbf961900</sys_ui_section>
             <sys_updated_by>robert.polickoski</sys_updated_by>
-            <sys_updated_on>2018-09-20 18:43:13</sys_updated_on>
+            <sys_updated_on>2018-09-21 12:51:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,27 +46,27 @@
             <element>.split</element>
             <position>3</position>
             <sys_created_by>robert.polickoski</sys_created_by>
-            <sys_created_on>2018-09-20 18:43:13</sys_created_on>
-            <sys_id>d6dadd2bdbec23007c857fcfbf96198d</sys_id>
+            <sys_created_on>2018-09-21 12:51:36</sys_created_on>
+            <sys_id>f5f3917bdb2863007c857fcfbf961938</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Status" display_value="Status" name="x_275826_vim_vendor_instance" sys_domain="global" view="Default view">4b9a592bdbec23007c857fcfbf961900</sys_ui_section>
             <sys_updated_by>robert.polickoski</sys_updated_by>
-            <sys_updated_on>2018-09-20 18:43:13</sys_updated_on>
+            <sys_updated_on>2018-09-21 12:51:36</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>checked_out</element>
+            <element>last_zboot</element>
             <position>4</position>
             <sys_created_by>robert.polickoski</sys_created_by>
-            <sys_created_on>2018-09-20 18:43:13</sys_created_on>
-            <sys_id>5adadd2bdbec23007c857fcfbf96198d</sys_id>
+            <sys_created_on>2018-09-21 12:51:36</sys_created_on>
+            <sys_id>79f3917bdb2863007c857fcfbf961938</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Status" display_value="Status" name="x_275826_vim_vendor_instance" sys_domain="global" view="Default view">4b9a592bdbec23007c857fcfbf961900</sys_ui_section>
             <sys_updated_by>robert.polickoski</sys_updated_by>
-            <sys_updated_on>2018-09-20 18:43:13</sys_updated_on>
+            <sys_updated_on>2018-09-21 12:51:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>last_clone_source</element>
             <position>5</position>
             <sys_created_by>robert.polickoski</sys_created_by>
-            <sys_created_on>2018-09-20 18:43:13</sys_created_on>
-            <sys_id>dadadd2bdbec23007c857fcfbf96198d</sys_id>
+            <sys_created_on>2018-09-21 12:51:36</sys_created_on>
+            <sys_id>f9f3917bdb2863007c857fcfbf961938</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Status" display_value="Status" name="x_275826_vim_vendor_instance" sys_domain="global" view="Default view">4b9a592bdbec23007c857fcfbf961900</sys_ui_section>
             <sys_updated_by>robert.polickoski</sys_updated_by>
-            <sys_updated_on>2018-09-20 18:43:13</sys_updated_on>
+            <sys_updated_on>2018-09-21 12:51:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>.end_split</element>
             <position>6</position>
             <sys_created_by>robert.polickoski</sys_created_by>
-            <sys_created_on>2018-09-20 18:43:13</sys_created_on>
-            <sys_id>5edadd2bdbec23007c857fcfbf96198d</sys_id>
+            <sys_created_on>2018-09-21 12:51:36</sys_created_on>
+            <sys_id>7df3917bdb2863007c857fcfbf961938</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Status" display_value="Status" name="x_275826_vim_vendor_instance" sys_domain="global" view="Default view">4b9a592bdbec23007c857fcfbf961900</sys_ui_section>
             <sys_updated_by>robert.polickoski</sys_updated_by>
-            <sys_updated_on>2018-09-20 18:43:13</sys_updated_on>
+            <sys_updated_on>2018-09-21 12:51:36</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
