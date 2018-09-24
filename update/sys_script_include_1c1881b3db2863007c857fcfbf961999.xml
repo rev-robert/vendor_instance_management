@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
@@ -15,7 +16,7 @@ VendorInstanceManagementUtils.prototype = {
  	***************************************
  	**************************************/
 	initialize: function() {
-		this.log = new GSLog('com.snc.task.log','VendorInstanceManagementUtils');
+		this.log = new global.GSLog('com.snc.task.log','VendorInstanceManagementUtils');
 		this.msg = 'VendorInstanceManagementUtils initialized' + '\n';
 		/**************************************
  		*****      Activate Debugging     *****
@@ -24,6 +25,60 @@ VendorInstanceManagementUtils.prototype = {
 		/**************************************
  		**************************************/
 	},
+	
+	checkoutInstance: function (sidInstance  /* sys_id of vendor_instance */, sidCheckout  /* sys_id of vendor_instance_checkout */) {
+		/**************************************
+ 		*****  Sets the checkout fields   *****
+ 		*****  on a vendor_instance       *****
+ 		**************************************/
+		this.msg += 'checkoutInstance(' + sidInstance.toString() + ', ' + sidCheckout.toString() + ')' + '\n';
+		var boolSuccess = true;
+		try {
+			var grVI = new GlideRecord('x_275826_vim_vendor_instance');
+			grVI.get(sidInstance.toString());
+			grVI.checked_out = true;
+			grVI.current_checkout = sidCheckout.toString();
+			grVI.update();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in checkoutInstance:  ' + err.message + '\n';
+			this.log.logErr();
+			boolSuccess = false;
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return boolSuccess;
+		}  // finally
+	},  // checkoutInstance
+	
+	checkinInstance: function (sidInstance  /* sys_id of vendor_instance */) {
+		/**************************************
+ 		*****  Sets the checkout fields   *****
+ 		*****  on a vendor_instance       *****
+ 		**************************************/
+		this.msg += 'checkinInstance(' + sidInstance.toString() + ')' + '\n';
+		var boolSuccess = true;
+		try {
+			var grVI = new GlideRecord('x_275826_vim_vendor_instance');
+			grVI.get(sidInstance.toString());
+			grVI.checked_out = false;
+			grVI.current_checkout = '';
+			grVI.update();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in checkinInstance:  ' + err.message + '\n';
+			this.log.logErr();
+			boolSuccess = false;
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return boolSuccess;
+		}  // finally
+	},  // checkinInstance
 	
 	createCheckout: function (sidInstance  /* sys_id of vendor_instance */, sidUser  /* sys_id if sys_user */, gdtCheckout  /* GlideDateTime */, gdtCheckin  /* GlideDateTime */, sidTask  /* sys_id of task */) {
 		/**************************************
@@ -105,7 +160,7 @@ VendorInstanceManagementUtils.prototype = {
  		*****  Find a Vendor Instance     *****
  		*****  Checkout record for a      *****
  		*****  specified Vendor Instance  *****
-		*****  and the provided dates     *****
+ 		*****  and the provided dates     *****
  		**************************************/
 		this.msg += 'findVendorInstanceCheckout(' + sidInstance.toString() + ', ' + gdtCheckout.getDisplayValue() + ', ' + gdtCheckin.getDisplayValue() + ')' + '\n';
 		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
@@ -130,19 +185,103 @@ VendorInstanceManagementUtils.prototype = {
 		
 	},  // findVendorInstanceCheckout
 	
+	createVendorInstanceMaintenanceTask: function (sidInstance  /* sys_id of vendor_instance */, intDays  /* integer days in which to complete */) {
+		/**************************************
+ 		*****  Create a task to restore a *****
+ 		*****  Vendor Instance to a ready *****
+ 		*****  state for future use       *****
+ 		**************************************/
+		this.msg += 'createVendorInstanceMaintenanceTask(' + sidInstance.toString() + ')' + '\n';
+		var grVIM = new GlideRecord('x_275826_vim_vendor_instance_maintenance');
+		try {
+			if (intDays == undefined) {
+				intDays = gs.getProperty('x_275826_vim.days_maintenance');
+			}  // if (intDays == undefined)
+			var gdtDue = new GlideDateTime();
+			gdtDue.addDaysLocalTime(intDays);
+			grVIM.initialize();
+			grVIM.vendor_instance = sidInstance.toString();
+			var grVI = this.__getVendorInstance(sidInstance);
+			grVIM.assignment_group = grVI.support_group.toString();
+			grVIM.short_description = 'Review and restore ' + grVIM.name.toString() + ' to a ready state for the next checkout.' ;
+			grVIM.due_date = gdtDue.getDisplayValueInternal();
+			grVIM.update();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in createVendorInstanceMaintenanceTask:  ' + err.message + '\n';
+			this.log.logErr();
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIM;
+		}  // finally
+	},  // createVendorInstanceMaintenanceTask
+	
+	__getVendorInstanceSupportGroup:  function (sidInstance  /* sys_id of vendor_instance */) {
+		/**************************************
+ 		*****  Returns the sys_id of the  *****
+ 		*****  Support Group for the      *****
+ 		*****  specified Vendor Instance  *****
+ 		**************************************/
+		this.msg += '__getVendorInstanceSupportGroup(' + sidInstance.toString() + ')' + '\n';
+		var sidSupportGroup = '';
+		try {
+			var grVIM = new GlideRecord('x_275826_vim_vendor_instance');
+			grVIM.get('vendor_instance', sidInstance.toString());
+			sidSupportGroup = grVIM.support_group.toString();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in __getVendorInstanceSupportGroup:  ' + err.message + '\n';
+			this.log.logErr();
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return sidSupportGroup;
+		}  // finally
+	},  // __getVendorInstanceSupportGroup
+	
+	__getVendorInstance:  function (sidInstance  /* sys_id of vendor_instance */) {
+		/**************************************
+ 		*****  Returns the sys_id of the  *****
+ 		*****  Support Group for the      *****
+ 		*****  specified Vendor Instance  *****
+ 		**************************************/
+		this.msg += '__getVendorInstanceSupportGroup(' + sidInstance.toString() + ')' + '\n';
+		var grVIM = new GlideRecord('x_275826_vim_vendor_instance');
+		try {
+			grVIM.get('vendor_instance', sidInstance.toString());
+		}  // try
+		catch (err) {
+			this.msg += 'Error in __getVendorInstanceSupportGroup:  ' + err.message + '\n';
+			this.log.logErr();
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIM;
+		}  // finally
+	},  // __getVendorInstanceSupportGroup
+	
 	type: 'VendorInstanceManagementUtils'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-21 13:19:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>1c1881b3db2863007c857fcfbf961999</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>VendorInstanceManagementUtils</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_script_include_1c1881b3db2863007c857fcfbf961999</sys_update_name>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:33:12</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2018-09-24 20:36:12</sys_updated_on>
     </sys_script_include>
 </record_update>

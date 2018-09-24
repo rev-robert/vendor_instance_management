@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>Vendor Instance Maintenance</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Vendor Instance Maintenance</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">85dbc0b5db2232008724fe8d0f9619de</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2018-09-24 16:07:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>169d51bcdbb0e700a65afa5aaf9619fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vendor Instance Maintenance</sys_name>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_update_name>sys_wizard_answer_169d51bcdbb0e700a65afa5aaf9619fb</sys_update_name>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2018-09-24 16:07:37</sys_updated_on>
+        <table/>
+        <target_url>x_275826_vim_vendor_instance_maintenance.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

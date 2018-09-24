@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update>
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
     <sys_documentation element="url" label="URL" language="en" table="x_275826_vim_vendor_instance">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>url</element>
@@ -11,11 +12,13 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>robert.polickoski</sys_created_by>
             <sys_created_on>2018-09-20 17:16:22</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
             <sys_id>5af605ebdbac23007c857fcfbf961926</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>URL</sys_name>
             <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
             <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
             <sys_update_name>sys_documentation_x_275826_vim_vendor_instance_url_en</sys_update_name>
             <sys_updated_by>robert.polickoski</sys_updated_by>
