@@ -9,7 +9,7 @@
         <action_update>true</action_update>
         <active>true</active>
         <add_message>false</add_message>
-        <advanced>false</advanced>
+        <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>x_275826_vim_vendor_instance_maintenance</collection>
@@ -31,9 +31,13 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-
-	// Add your code here
-
+	gs.addInfoMessage('Checkin Vendor Instance from Maintenance');
+	var utils = new VendorInstanceManagementUtils();
+	var gdtCheckin = new GlideDateTime();
+	var grVIC = utils.findVendorInstanceCheckoutFromTask(current.vendor_instance.toString(), current.sys_id.toString());
+	if (grVIC.next()) {
+		grVIC = utils.updateCheckinDate(grVIC.sys_id.toString(), gdtCheckin);
+	}  // if (grVIC.next())
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>rpolicko</sys_created_by>
@@ -42,7 +46,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>aeedb934db34e700a65afa5aaf961911</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Checkin Vendor Instance from Maintenance</sys_name>
         <sys_overrides/>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
@@ -51,9 +55,9 @@
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_script_aeedb934db34e700a65afa5aaf961911</sys_update_name>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2018-09-24 18:30:37</sys_updated_on>
-        <template>vendor_instance.checked_out=false^EQ</template>
-        <when>before</when>
+        <sys_updated_on>2018-09-25 12:55:52</sys_updated_on>
+        <template/>
+        <when>after</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=aeedb934db34e700a65afa5aaf961911"/>
 </record_update>

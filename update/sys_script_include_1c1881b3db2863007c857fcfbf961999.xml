@@ -42,7 +42,7 @@ VendorInstanceManagementUtils.prototype = {
 		}  // try
 		catch (err) {
 			this.msg += 'Error in checkoutInstance:  ' + err.message + '\n';
-			this.log.logErr();
+			this.log.logErr(this.msg);
 			boolSuccess = false;
 		}  // catch (err)
 		finally {
@@ -69,7 +69,7 @@ VendorInstanceManagementUtils.prototype = {
 		}  // try
 		catch (err) {
 			this.msg += 'Error in checkinInstance:  ' + err.message + '\n';
-			this.log.logErr();
+			this.log.logErr(this.msg);
 			boolSuccess = false;
 		}  // catch (err)
 		finally {
@@ -85,14 +85,15 @@ VendorInstanceManagementUtils.prototype = {
  		*****  Create a Vendor Instance   *****
  		*****  Checkout record            *****
  		**************************************/
-		this.msg += 'createCheckout(' + sidInstance.toString() + ', ' + sidUser.toString() + ', ' + gdtCheckout.getDisplayValue() + ', ' + gdtCheckin.getDisplayValue() + ', ' + sidTask.toString + ')' + '\n';
+		this.msg += 'createCheckout(' + sidInstance.toString() + ', ' + sidUser.toString() + ', ' + gdtCheckout.getDisplayValue() + ', ' + gdtCheckin.getDisplayValue() + ', ' + sidTask.toString() + ')' + '\n';
 		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
 		try {
+			grVIC.initialize();
 			grVIC.vendor_instance = sidInstance.toString();
 			grVIC.user = sidUser.toString();
-			grVIC.checkout_date = gdtCheckout.getValue();
+			grVIC.checkout_date = gdtCheckout.getDisplayValueInternal();
 			if (gdtCheckin != undefined) {
-				grVIC.checkin_date = gdtCheckin.getValue();
+				grVIC.checkin_date = gdtCheckin.getDisplayValueInternal();
 			}  // if (gdtCheckin != undefined)
 			if (sidTask != undefined) {
 				grVIC.task = sidTask.toString();
@@ -101,7 +102,7 @@ VendorInstanceManagementUtils.prototype = {
 		}  // try
 		catch (err) {
 			this.msg += 'Error in createCheckout:  ' + err.message + '\n';
-			this.log.logErr();
+			this.log.logErr(this.msg);
 		}  // catch (err)
 		finally {
 			if (this.debug) {
@@ -110,6 +111,31 @@ VendorInstanceManagementUtils.prototype = {
 			return grVIC;
 		}  // finally
 	},  // createCheckout
+	
+	updateCheckinDate:  function (sidCheckout  /*   */, gdtCheckin  /* GlideDateTime */) {
+		/**************************************
+ 		*****  Update a Vendor Instance   *****
+ 		*****  Checkout record with a new *****
+ 		*****  checkin date               *****
+ 		**************************************/
+		this.msg += 'updateCheckinDate(' + sidCheckout.toString() + ', ' + gdtCheckin.getDisplayValue() + ')' + '\n';
+		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
+		try {
+			grVIC.get(sidCheckout);
+			grVIC.checkin_date = gdtCheckin.getDisplayValueInternal();
+			grVIC.update();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in updateCheckinDate:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIC;
+		}  // finally
+	},  // updateCheckinDate
 	
 	checkVendorInstanceAvailability: function (sidInstance  /* sys_id of vendor_instance */, gdtCheckout  /* GlideDateTime */, gdtCheckin  /* GlideDateTime */) {
 		/**************************************
@@ -145,7 +171,7 @@ VendorInstanceManagementUtils.prototype = {
 		}  // try
 		catch (err) {
 			this.msg += 'Error in checkVendorInstanceAvailability:  ' + err.message + '\n';
-			this.log.logErr();
+			this.log.logErr(this.msg);
 		}  // catch (err)
 		finally {
 			if (this.debug) {
@@ -158,7 +184,7 @@ VendorInstanceManagementUtils.prototype = {
 	findVendorInstanceCheckout: function (sidInstance  /* sys_id of vendor_instance */, gdtCheckout  /* GlideDateTime */, gdtCheckin  /* GlideDateTime */) {
 		/**************************************
  		*****  Find a Vendor Instance     *****
- 		*****  Checkout record for a      *****
+ 		*****  Checkout recordset for a   *****
  		*****  specified Vendor Instance  *****
  		*****  and the provided dates     *****
  		**************************************/
@@ -173,8 +199,8 @@ VendorInstanceManagementUtils.prototype = {
 			grVIC.query();
 		}  // try
 		catch (err) {
-			this.msg += 'Error in createCheckout:  ' + err.message + '\n';
-			this.log.logErr();
+			this.msg += 'Error in findVendorInstanceCheckout:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
 		}  // catch (err)
 		finally {
 			if (this.debug) {
@@ -184,6 +210,61 @@ VendorInstanceManagementUtils.prototype = {
 		}  // finally
 		
 	},  // findVendorInstanceCheckout
+	
+	findVendorInstanceCheckoutFromTask: function (sidInstance  /* sys_id of vendor_instance */, sidTask  /* sys_id of task */) {
+		/**************************************
+ 		*****  Find a Vendor Instance     *****
+ 		*****  Checkout recordset for a   *****
+ 		*****  specified Vendor Instance  *****
+ 		*****  and task                   *****
+ 		**************************************/
+		this.msg += 'findVendorInstanceCheckoutFromTask(' + sidInstance.toString() + ', ' + sidTask.toString() + ')' + '\n';
+		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
+		try {
+			grVIC.addQuery('vendor_instance', sidInstance.toString());
+			grVIC.addQuery('task', sidTask.toString());
+			grVIC.orderByDesc('checkout_date');
+			grVIC.query();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in findVendorInstanceCheckoutFromTask:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIC;
+		}  // finally
+	},  // findVendorInstanceCheckoutFromTask
+	
+	findVendorInstanceCurrentCheckout: function (sidInstance  /* sys_id of vendor_instance */) {
+		/**************************************
+ 		*****  Find a Vendor Instance     *****
+ 		*****  Checkout record that is    *****
+ 		*****   the current for a Vendor  *****
+ 		*****  Instance                   *****
+ 		**************************************/
+		this.msg += 'findVendorInstanceCurrentCheckout(' + sidInstance.toString() + ')' + '\n';
+		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
+		try {
+			var grVI = new GlideRecord('x_275826_vim_vendor_instance');
+			grVI.get(sidInstance);
+			this.msg += 'grVI (' + grVI.sys_id.toString() + ') retrieved.  grVI.current_checkout = ' + grVI.current_checkout.toString() + '\n';
+			grVIC.get(grVI.current_checkout.toString());
+		}  // try
+		catch (err) {
+			this.msg += 'Error in findVendorInstanceCurrentCheckout:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			this.msg += 'grVIC.sys_id = ' + grVIC.sys_id.toString() + '\n';
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIC;
+		}  // finally
+	},  // findVendorInstanceCurrentCheckout
 	
 	createVendorInstanceMaintenanceTask: function (sidInstance  /* sys_id of vendor_instance */, intDays  /* integer days in which to complete */) {
 		/**************************************
@@ -203,13 +284,13 @@ VendorInstanceManagementUtils.prototype = {
 			grVIM.vendor_instance = sidInstance.toString();
 			var grVI = this.__getVendorInstance(sidInstance);
 			grVIM.assignment_group = grVI.support_group.toString();
-			grVIM.short_description = 'Review and restore ' + grVIM.name.toString() + ' to a ready state for the next checkout.' ;
+			grVIM.short_description = 'Review and restore ' + grVI.name.toString() + ' to a ready state for the next checkout.' ;
 			grVIM.due_date = gdtDue.getDisplayValueInternal();
 			grVIM.update();
 		}  // try
 		catch (err) {
 			this.msg += 'Error in createVendorInstanceMaintenanceTask:  ' + err.message + '\n';
-			this.log.logErr();
+			this.log.logErr(this.msg);
 		}  // catch (err)
 		finally {
 			if (this.debug) {
@@ -228,13 +309,13 @@ VendorInstanceManagementUtils.prototype = {
 		this.msg += '__getVendorInstanceSupportGroup(' + sidInstance.toString() + ')' + '\n';
 		var sidSupportGroup = '';
 		try {
-			var grVIM = new GlideRecord('x_275826_vim_vendor_instance');
-			grVIM.get('vendor_instance', sidInstance.toString());
-			sidSupportGroup = grVIM.support_group.toString();
+			var grVI = new GlideRecord('x_275826_vim_vendor_instance');
+			grVI.get(sidInstance.toString());
+			sidSupportGroup = grVI.support_group.toString();
 		}  // try
 		catch (err) {
 			this.msg += 'Error in __getVendorInstanceSupportGroup:  ' + err.message + '\n';
-			this.log.logErr();
+			this.log.logErr(this.msg);
 		}  // catch (err)
 		finally {
 			if (this.debug) {
@@ -246,24 +327,24 @@ VendorInstanceManagementUtils.prototype = {
 	
 	__getVendorInstance:  function (sidInstance  /* sys_id of vendor_instance */) {
 		/**************************************
- 		*****  Returns the sys_id of the  *****
- 		*****  Support Group for the      *****
- 		*****  specified Vendor Instance  *****
+ 		*****  Returns the GlideRecord    *****
+ 		*****  for the specified Vendor   *****
+ 		*****  Instance                   *****
  		**************************************/
-		this.msg += '__getVendorInstanceSupportGroup(' + sidInstance.toString() + ')' + '\n';
-		var grVIM = new GlideRecord('x_275826_vim_vendor_instance');
+		this.msg += '__getVendorInstance(' + sidInstance.toString() + ')' + '\n';
+		var grVI = new GlideRecord('x_275826_vim_vendor_instance');
 		try {
-			grVIM.get('vendor_instance', sidInstance.toString());
+			grVI.get(sidInstance.toString());
 		}  // try
 		catch (err) {
-			this.msg += 'Error in __getVendorInstanceSupportGroup:  ' + err.message + '\n';
-			this.log.logErr();
+			this.msg += 'Error in __getVendorInstance:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
 		}  // catch (err)
 		finally {
 			if (this.debug) {
 				this.log.logDebug(this.msg);
 			}  // if (this.debug)
-			return grVIM;
+			return grVI;
 		}  // finally
 	},  // __getVendorInstanceSupportGroup
 	
@@ -274,7 +355,7 @@ VendorInstanceManagementUtils.prototype = {
         <sys_created_on>2018-09-21 13:19:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1c1881b3db2863007c857fcfbf961999</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name>VendorInstanceManagementUtils</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy>read</sys_policy>
@@ -282,6 +363,6 @@ VendorInstanceManagementUtils.prototype = {
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_script_include_1c1881b3db2863007c857fcfbf961999</sys_update_name>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2018-09-24 20:36:12</sys_updated_on>
+        <sys_updated_on>2018-09-25 13:51:51</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -2,7 +2,7 @@
 <record_update sys_domain="global" table="sys_ui_module">
     <sys_ui_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <application display_value="Vendor Instance">8e46c9abdbac23007c857fcfbf961977</application>
+        <application/>
         <filter/>
         <name>Vendor Instances</name>
         <order/>

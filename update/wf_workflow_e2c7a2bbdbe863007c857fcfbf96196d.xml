@@ -32,12 +32,12 @@
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-21 18:57:50</sys_created_on>
         <sys_id>2e67a2bbdbe863007c857fcfbf9619d9</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:48:13</sys_updated_on>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2018-09-25 13:05:39</sys_updated_on>
         <table>x_275826_vim_vendor_instance_checkout_request</table>
         <timezone/>
-        <validated>false</validated>
+        <validated>true</validated>
         <workflow display_value="Vendor Instance Checkout Request">e2c7a2bbdbe863007c857fcfbf96196d</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">
