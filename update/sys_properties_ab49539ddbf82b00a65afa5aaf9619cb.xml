@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>Emergency=emerg, Alert=alert, Critical=crit, Error=err, Warning=warning, Notice=notice, Info=info, Debug=debug</choices>
+        <description>Log Level for Vendor Instance Management:  Default=Debug</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_275826_vim.com.vim.log</name>
+        <read_roles>x_275826_vim.vendor_instance_maintenance_user,x_275826_vim.vendor_instance_user,x_275826_vim.vendor_instance_manager</read_roles>
+        <suffix>com.vim.log</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2018-09-26 14:27:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ab49539ddbf82b00a65afa5aaf9619cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_275826_vim.com.vim.log</sys_name>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_update_name>sys_properties_ab49539ddbf82b00a65afa5aaf9619cb</sys_update_name>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2018-09-26 14:27:12</sys_updated_on>
+        <type>choicelist</type>
+        <value>debug</value>
+        <write_roles>x_275826_vim.vendor_instance_maintenance_user,x_275826_vim.vendor_instance_manager</write_roles>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=ab49539ddbf82b00a65afa5aaf9619cb"/>
+</record_update>

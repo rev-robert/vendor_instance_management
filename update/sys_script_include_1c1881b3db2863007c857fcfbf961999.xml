@@ -16,7 +16,7 @@ VendorInstanceManagementUtils.prototype = {
  	***************************************
  	**************************************/
 	initialize: function() {
-		this.log = new global.GSLog('com.snc.task.log','VendorInstanceManagementUtils');
+		this.log = new global.GSLog('x_275826_vim.com.vim.log','VendorInstanceManagementUtils');
 		this.msg = 'VendorInstanceManagementUtils initialized' + '\n';
 		/**************************************
  		*****      Activate Debugging     *****
@@ -147,23 +147,35 @@ VendorInstanceManagementUtils.prototype = {
 		var boolIsAvailable = true;
 		try {
 			var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
-			grVIC.addQuery('vendor_instance', sidInstance.toString());
-			grVIC.addEncodedQuery("checkin_dateISEMPTY^checkout_date<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')^NQcheckin_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')");
-			if (gdtCheckin != undefined) {
-				grVIC.addEncodedQuery("checkin_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')^ORcheckout_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')");
-			}  // if (gdtCheckin != undefined)
+			this.msg += 'grVIC initialized.' + '\n';
+			var strEQuery = "vendor_instance=" + sidInstance.toString() + "^checkin_dateISEMPTY^checkout_date<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')^NQvendor_instance=" + sidInstance.toString() + "^checkin_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')";
+			this.msg += '(1) strEQuery = ' + strEQuery + '\n';
+			this.msg += "gdtCheckin.getDisplayValue() != ''" + (gdtCheckin.getDisplayValue() != '') + "\n";
+			if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != '')) {
+				strEQuery += "^NQvendor_instance=" + sidInstance.toString() + "^checkin_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')^ORcheckout_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')";
+			this.msg += '(2) strEQuery = ' + strEQuery + '\n';
+			}  // if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != ''))
+			grVIC.addEncodedQuery(strEQuery);
+			this.msg += 'Final grVIC.getEncodedQuery() = ' + grVIC.getEncodedQuery() + '\n';
 			grVIC.query();
+			this.msg += 'grVIC.getRowCount() = ' + grVIC.getRowCount() + '\n';
 			if (grVIC.getRowCount() > 0) {
 				boolIsAvailable = false;
 			}  // if (grVIC.getRowCount() > 0)
 			else {
 				var grVICR = new GlideRecord('x_275826_vim_vendor_instance_checkout_request');
+				this.msg += 'grVICR initialized.' + '\n';
 				grVICR.addQuery('vendor_instance', sidInstance.toString());
-				grVICR.addEncodedQuery("due_dateISEMPTY^expected_start<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')^NQdue_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')");
-				if (gdtCheckin != undefined) {
-					grVICR.addEncodedQuery("due_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')^ORexpected_startBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')");
-				}  // if (gdtCheckin != undefined)
+				this.msg += 'vendor_instance query added to grVICR' + '\n';
+				grVICR.addEncodedQuery("due_dateISEMPTY^expected_start<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')^NQdue_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')");
+				this.msg += 'Checkout Encoded Query added to grVICR' + '\n' + '\t' + grVICR.getEncodedQuery() + '\n';
+				if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != '')) {
+					grVICR.addEncodedQuery("due_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')^ORexpected_startBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')");
+					this.msg += 'Checkin Encoded Query added to grVICR' + '\n' + '\t' + grVICR.getEncodedQuery() + '\n';
+				}  // if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != ''))
+				this.msg += 'grVICR.getEncodedQuery() = ' + grVICR.getEncodedQuery() + '\n';
 				grVICR.query();
+				this.msg += 'grVICR.getRowCount() = ' + grVICR.getRowCount() + '\n';
 				if (grVICR.getRowCount() > 0) {
 					boolIsAvailable = false;
 				}  // if (grVICR.getRowCount() > 0)
@@ -174,6 +186,7 @@ VendorInstanceManagementUtils.prototype = {
 			this.log.logErr(this.msg);
 		}  // catch (err)
 		finally {
+			gs.debug(this.msg);
 			if (this.debug) {
 				this.log.logDebug(this.msg);
 			}  // if (this.debug)
@@ -385,7 +398,7 @@ VendorInstanceManagementUtils.prototype = {
         <sys_created_on>2018-09-21 13:19:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1c1881b3db2863007c857fcfbf961999</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>61</sys_mod_count>
         <sys_name>VendorInstanceManagementUtils</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy>read</sys_policy>
@@ -393,6 +406,6 @@ VendorInstanceManagementUtils.prototype = {
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_script_include_1c1881b3db2863007c857fcfbf961999</sys_update_name>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2018-09-26 13:24:02</sys_updated_on>
+        <sys_updated_on>2018-09-26 16:20:54</sys_updated_on>
     </sys_script_include>
 </record_update>
