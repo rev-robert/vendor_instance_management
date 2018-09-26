@@ -23,10 +23,8 @@ var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
 grVIC.addEncodedQuery("vendor_instance.checked_out=true^checkout_dateRELATIVELE@minute@ahead@" + gs.getProperty('x_275826_vim.vendor_instance_checkin_threshold').toString());
 grVIC.query();
 while (grVIC.next()) {
-	var grVI = new GlideRecord('x_275826_vim_vendor_instance');
-	grVI.get(grVIC.vendor_instance.toString());
-	grVI.setValue('checked_out', false);
-	grVI.update();
+	var utils = new VendorInstanceManagementUtils();
+	var boolSuccess = utils.checkinInstance(grVIC.vendor_instance.toString());
 }  // while (grVIC.next())
 ]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
@@ -34,15 +32,15 @@ while (grVIC.next()) {
         <sys_created_on>2018-09-20 19:29:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>97836dafdbec23007c857fcfbf96198d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Checkin Vendor Instances</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sysauto_script_97836dafdbec23007c857fcfbf96198d</sys_update_name>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-20 19:48:01</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2018-09-26 11:55:57</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

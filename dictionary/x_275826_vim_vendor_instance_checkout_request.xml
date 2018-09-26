@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="Vendor Instance Checkout Request" max_length="40" name="x_275826_vim_vendor_instance_checkout_request" type="collection">
+    <element extends="task" label="Vendor Instance Checkout Request" max_length="40" name="x_275826_vim_vendor_instance_checkout_request" sizeclass="2" type="collection">
         <element label="Vendor Instance" mandatory="true" max_length="32" name="vendor_instance" reference="x_275826_vim_vendor_instance" type="reference"/>
     </element>
 </database>
