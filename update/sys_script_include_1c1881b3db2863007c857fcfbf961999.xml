@@ -153,7 +153,7 @@ VendorInstanceManagementUtils.prototype = {
 			this.msg += "gdtCheckin.getDisplayValue() != ''" + (gdtCheckin.getDisplayValue() != '') + "\n";
 			if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != '')) {
 				strEQuery += "^NQvendor_instance=" + sidInstance.toString() + "^checkin_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')^ORcheckout_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')";
-			this.msg += '(2) strEQuery = ' + strEQuery + '\n';
+				this.msg += '(2) strEQuery = ' + strEQuery + '\n';
 			}  // if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != ''))
 			grVIC.addEncodedQuery(strEQuery);
 			this.msg += 'Final grVIC.getEncodedQuery() = ' + grVIC.getEncodedQuery() + '\n';
@@ -193,6 +193,40 @@ VendorInstanceManagementUtils.prototype = {
 			return boolIsAvailable;
 		}  // finally
 	},  // checkVendorInstanceAvailability
+	
+	findVendorInstanceCheckoutConflicts: function (sidInstance  /* sys_id of vendor_instance */, gdtCheckout  /* GlideDateTime */, gdtCheckin  /* GlideDateTime */) {
+		/**************************************
+ 		*****  Check for Vendor Instance  *****
+ 		*****  Checkout records within    *****
+ 		*****  provided dates             *****
+ 		**************************************/
+		this.msg += 'findVendorInstanceCheckoutConflicts(' + sidInstance.toString() + ', ' + gdtCheckout.getDisplayValue() + ', ' + gdtCheckin.getDisplayValue() + ')' + '\n';
+		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
+		try {
+			this.msg += 'grVIC initialized.' + '\n';
+			var strEQuery = "vendor_instance=" + sidInstance.toString() + "^checkin_dateISEMPTY^checkout_date<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')^NQvendor_instance=" + sidInstance.toString() + "^checkin_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')";
+			this.msg += '(1) strEQuery = ' + strEQuery + '\n';
+			this.msg += "gdtCheckin.getDisplayValue() != ''" + (gdtCheckin.getDisplayValue() != '') + "\n";
+			if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != '')) {
+				strEQuery += "^NQvendor_instance=" + sidInstance.toString() + "^checkin_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')^ORcheckout_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')";
+				this.msg += '(2) strEQuery = ' + strEQuery + '\n';
+			}  // if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != ''))
+			grVIC.addEncodedQuery(strEQuery);
+			this.msg += 'Final grVIC.getEncodedQuery() = ' + grVIC.getEncodedQuery() + '\n';
+			grVIC.query();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in findVendorInstanceCheckoutConflicts:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			gs.debug(this.msg);
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIC;
+		}  // finally		
+	},  // findVendorInstanceCheckoutConflicts
 	
 	findVendorInstanceCheckout: function (sidInstance  /* sys_id of vendor_instance */, gdtCheckout  /* GlideDateTime */, gdtCheckin  /* GlideDateTime */) {
 		/**************************************
@@ -398,7 +432,7 @@ VendorInstanceManagementUtils.prototype = {
         <sys_created_on>2018-09-21 13:19:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1c1881b3db2863007c857fcfbf961999</sys_id>
-        <sys_mod_count>61</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>VendorInstanceManagementUtils</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy>read</sys_policy>
@@ -406,6 +440,6 @@ VendorInstanceManagementUtils.prototype = {
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_script_include_1c1881b3db2863007c857fcfbf961999</sys_update_name>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2018-09-26 16:20:54</sys_updated_on>
+        <sys_updated_on>2018-09-26 16:56:01</sys_updated_on>
     </sys_script_include>
 </record_update>

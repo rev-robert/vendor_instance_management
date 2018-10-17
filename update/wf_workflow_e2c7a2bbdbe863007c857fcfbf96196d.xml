@@ -1958,12 +1958,12 @@ answer = 0;</value>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>3e5d6e7fdbe863007c857fcfbf961941</sys_id>
+        <sys_id>765d6e7fdbe863007c857fcfbf961942</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>robert.polickoski</sys_updated_by>
         <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
-        <variable display_value="">a7754e91c0a800664938d0ef6d2664d7</variable>
+        <value/>
+        <variable display_value="">a774138dc0a80066000be7af20961c7d</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -1972,12 +1972,12 @@ answer = 0;</value>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>765d6e7fdbe863007c857fcfbf961942</sys_id>
+        <sys_id>3e5d6e7fdbe863007c857fcfbf961941</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>robert.polickoski</sys_updated_by>
         <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a774138dc0a80066000be7af20961c7d</variable>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="">a7754e91c0a800664938d0ef6d2664d7</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>

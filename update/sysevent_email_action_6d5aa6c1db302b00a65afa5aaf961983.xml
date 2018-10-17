@@ -74,6 +74,14 @@
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
+        <u_buttons/>
+        <u_email_body/>
+        <u_email_subject/>
+        <u_message_text/>
+        <u_recipient_fields/>
+        <u_side_information/>
+        <u_tagline/>
+        <u_use_customize_email>false</u_use_customize_email>
         <weight>0</weight>
     </sysevent_email_action>
 </record_update>
