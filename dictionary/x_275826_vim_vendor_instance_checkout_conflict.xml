@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Vendor Instance Checkout Conflict" max_length="40" name="x_275826_vim_vendor_instance_checkout_conflict" type="collection">
+        <element dependent="conflict_table_one" dependent_on_field="conflict_table_one" label="Conflict record One" max_length="32" name="conflict_record_one" type="document_id" use_dependent_field="true"/>
+        <element dependent="conflict_table_two" dependent_on_field="conflict_table_two" label="Conflict record two" max_length="32" name="conflict_record_two" type="document_id" use_dependent_field="true"/>
+        <element label="Conflict table one" max_length="80" name="conflict_table_one" type="table_name"/>
+        <element label="Conflict table two" max_length="80" name="conflict_table_two" type="table_name"/>
+        <index name="index">
+            <element name="conflict_record_one"/>
+        </index>
+        <index name="index2">
+            <element name="conflict_record_two"/>
+        </index>
+    </element>
+</database>

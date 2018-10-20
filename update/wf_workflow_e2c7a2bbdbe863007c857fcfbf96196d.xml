@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_workflow_version">
     <wf_workflow_version action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_stages>{"subflows":[],"activities":{},"stages":{},"ends":["2ec7a2bbdbe863007c857fcfbf96196f"]}</activity_stages>
@@ -31,12 +32,12 @@
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-21 18:57:50</sys_created_on>
         <sys_id>2e67a2bbdbe863007c857fcfbf9619d9</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:48:13</sys_updated_on>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2018-09-25 13:05:39</sys_updated_on>
         <table>x_275826_vim_vendor_instance_checkout_request</table>
         <timezone/>
-        <validated>false</validated>
+        <validated>true</validated>
         <workflow display_value="Vendor Instance Checkout Request">e2c7a2bbdbe863007c857fcfbf96196d</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">
@@ -47,6 +48,7 @@
         <sys_class_name>wf_workflow</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-21 18:57:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e2c7a2bbdbe863007c857fcfbf96196d</sys_id>
@@ -55,6 +57,7 @@
         <sys_overrides/>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>wf_workflow_e2c7a2bbdbe863007c857fcfbf96196d</sys_update_name>
         <sys_updated_by>robert.polickoski</sys_updated_by>
@@ -1955,12 +1958,12 @@ answer = 0;</value>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>3e5d6e7fdbe863007c857fcfbf961941</sys_id>
+        <sys_id>765d6e7fdbe863007c857fcfbf961942</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>robert.polickoski</sys_updated_by>
         <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
-        <variable display_value="">a7754e91c0a800664938d0ef6d2664d7</variable>
+        <value/>
+        <variable display_value="">a774138dc0a80066000be7af20961c7d</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -1969,12 +1972,12 @@ answer = 0;</value>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>765d6e7fdbe863007c857fcfbf961942</sys_id>
+        <sys_id>3e5d6e7fdbe863007c857fcfbf961941</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>robert.polickoski</sys_updated_by>
         <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a774138dc0a80066000be7af20961c7d</variable>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="">a7754e91c0a800664938d0ef6d2664d7</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>

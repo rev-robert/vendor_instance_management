@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="current_checkout" label="Current Checkout" language="en" table="x_275826_vim_vendor_instance">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>current_checkout</element>
+            <help/>
+            <hint/>
+            <label>Current Checkout</label>
+            <language>en</language>
+            <name>x_275826_vim_vendor_instance</name>
+            <plural>Current Checkouts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>rpolicko</sys_created_by>
+            <sys_created_on>2018-09-24 17:57:05</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>69a6f1fcdbf0e700a65afa5aaf96192e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Current Checkout</sys_name>
+            <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+            <sys_update_name>sys_documentation_x_275826_vim_vendor_instance_current_checkout_en</sys_update_name>
+            <sys_updated_by>rpolicko</sys_updated_by>
+            <sys_updated_on>2018-09-24 17:57:05</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

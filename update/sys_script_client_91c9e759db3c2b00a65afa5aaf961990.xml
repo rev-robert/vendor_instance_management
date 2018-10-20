@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>checkin_date</field>
+        <global>true</global>
+        <messages/>
+        <name>Check Available - Checkin</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (!isLoading && newValue != '') {
+		var sidInstance = g_form.getValue('vendor_instance');
+		if ((sidInstance != '') && (g_form.getValue('checkout_date') != '')) {
+			var utils = new GlideAjax('VendorInstanceManagementAjaxUtils');
+			utils.addParam('sysparm_name', 'checkVendorInstanceAvailability');
+			utils.addParam('sysparm_sid_instance', sidInstance);
+			utils.addParam('sysparm_date_checkout', g_form.getValue('checkout_date'));
+			utils.addParam('sysparm_date_checkin', g_form.getValue('checkin_date'));
+			var response = utils.getXML(isAvailable);
+		}  // if (sidInstance != '')
+	}  // if (!isLoading && newValue != '')
+}
+
+function isAvailable (response) {
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	if (answer == 'false') {
+		alert('The Vendor Instance you are attempting to checkout is not available at this time.' + '\n' + '\n' + 'Please select another instance, another checkout time, or submit a Vendor Instance Checkout Request to have the conflict resolved.');
+	}  // if (answer == 'false')
+}  // isAvailable]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2018-09-26 15:37:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>91c9e759db3c2b00a65afa5aaf961990</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Check Available - Checkin</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_update_name>sys_script_client_91c9e759db3c2b00a65afa5aaf961990</sys_update_name>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2018-09-26 16:28:17</sys_updated_on>
+        <table>x_275826_vim_vendor_instance_checkout</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

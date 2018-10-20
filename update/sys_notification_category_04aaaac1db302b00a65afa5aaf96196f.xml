@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_notification_category">
+    <sys_notification_category action="INSERT_OR_UPDATE">
+        <name>Vendor Instance Management</name>
+        <short_description>Notifications for the Vendor Instance Management application</short_description>
+        <sys_class_name>sys_notification_category</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2018-09-25 16:23:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>04aaaac1db302b00a65afa5aaf96196f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vendor Instance Management</sys_name>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_update_name>sys_notification_category_04aaaac1db302b00a65afa5aaf96196f</sys_update_name>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2018-09-25 16:23:12</sys_updated_on>
+    </sys_notification_category>
+</record_update>

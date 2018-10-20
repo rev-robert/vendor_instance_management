@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
@@ -15,7 +16,7 @@ VendorInstanceManagementUtils.prototype = {
  	***************************************
  	**************************************/
 	initialize: function() {
-		this.log = new GSLog('com.snc.task.log','VendorInstanceManagementUtils');
+		this.log = new global.GSLog('x_275826_vim.com.vim.log','VendorInstanceManagementUtils');
 		this.msg = 'VendorInstanceManagementUtils initialized' + '\n';
 		/**************************************
  		*****      Activate Debugging     *****
@@ -25,19 +26,74 @@ VendorInstanceManagementUtils.prototype = {
  		**************************************/
 	},
 	
+	checkoutInstance: function (sidInstance  /* sys_id of vendor_instance */, sidCheckout  /* sys_id of vendor_instance_checkout */) {
+		/**************************************
+ 		*****  Sets the checkout fields   *****
+ 		*****  on a vendor_instance       *****
+ 		**************************************/
+		this.msg += 'checkoutInstance(' + sidInstance.toString() + ', ' + sidCheckout.toString() + ')' + '\n';
+		var boolSuccess = true;
+		try {
+			var grVI = new GlideRecord('x_275826_vim_vendor_instance');
+			grVI.get(sidInstance.toString());
+			grVI.checked_out = true;
+			grVI.current_checkout = sidCheckout.toString();
+			grVI.update();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in checkoutInstance:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+			boolSuccess = false;
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return boolSuccess;
+		}  // finally
+	},  // checkoutInstance
+	
+	checkinInstance: function (sidInstance  /* sys_id of vendor_instance */) {
+		/**************************************
+ 		*****  Sets the checkout fields   *****
+ 		*****  on a vendor_instance       *****
+ 		**************************************/
+		this.msg += 'checkinInstance(' + sidInstance.toString() + ')' + '\n';
+		var boolSuccess = true;
+		try {
+			var grVI = new GlideRecord('x_275826_vim_vendor_instance');
+			grVI.get(sidInstance.toString());
+			grVI.checked_out = false;
+			grVI.current_checkout = '';
+			grVI.update();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in checkinInstance:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+			boolSuccess = false;
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return boolSuccess;
+		}  // finally
+	},  // checkinInstance
+	
 	createCheckout: function (sidInstance  /* sys_id of vendor_instance */, sidUser  /* sys_id if sys_user */, gdtCheckout  /* GlideDateTime */, gdtCheckin  /* GlideDateTime */, sidTask  /* sys_id of task */) {
 		/**************************************
  		*****  Create a Vendor Instance   *****
  		*****  Checkout record            *****
  		**************************************/
-		this.msg += 'createCheckout(' + sidInstance.toString() + ', ' + sidUser.toString() + ', ' + gdtCheckout.getDisplayValue() + ', ' + gdtCheckin.getDisplayValue() + ', ' + sidTask.toString + ')' + '\n';
+		this.msg += 'createCheckout(' + sidInstance.toString() + ', ' + sidUser.toString() + ', ' + gdtCheckout.getDisplayValue() + ', ' + gdtCheckin.getDisplayValue() + ', ' + sidTask.toString() + ')' + '\n';
 		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
 		try {
+			grVIC.initialize();
 			grVIC.vendor_instance = sidInstance.toString();
 			grVIC.user = sidUser.toString();
-			grVIC.checkout_date = gdtCheckout.getValue();
+			grVIC.checkout_date = gdtCheckout.getDisplayValueInternal();
 			if (gdtCheckin != undefined) {
-				grVIC.checkin_date = gdtCheckin.getValue();
+				grVIC.checkin_date = gdtCheckin.getDisplayValueInternal();
 			}  // if (gdtCheckin != undefined)
 			if (sidTask != undefined) {
 				grVIC.task = sidTask.toString();
@@ -46,7 +102,7 @@ VendorInstanceManagementUtils.prototype = {
 		}  // try
 		catch (err) {
 			this.msg += 'Error in createCheckout:  ' + err.message + '\n';
-			this.log.logErr();
+			this.log.logErr(this.msg);
 		}  // catch (err)
 		finally {
 			if (this.debug) {
@@ -55,6 +111,31 @@ VendorInstanceManagementUtils.prototype = {
 			return grVIC;
 		}  // finally
 	},  // createCheckout
+	
+	updateCheckinDate:  function (sidCheckout  /*   */, gdtCheckin  /* GlideDateTime */) {
+		/**************************************
+ 		*****  Update a Vendor Instance   *****
+ 		*****  Checkout record with a new *****
+ 		*****  checkin date               *****
+ 		**************************************/
+		this.msg += 'updateCheckinDate(' + sidCheckout.toString() + ', ' + gdtCheckin.getDisplayValue() + ')' + '\n';
+		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
+		try {
+			grVIC.get(sidCheckout);
+			grVIC.checkin_date = gdtCheckin.getDisplayValueInternal();
+			grVIC.update();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in updateCheckinDate:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIC;
+		}  // finally
+	},  // updateCheckinDate
 	
 	checkVendorInstanceAvailability: function (sidInstance  /* sys_id of vendor_instance */, gdtCheckout  /* GlideDateTime */, gdtCheckin  /* GlideDateTime */) {
 		/**************************************
@@ -66,23 +147,35 @@ VendorInstanceManagementUtils.prototype = {
 		var boolIsAvailable = true;
 		try {
 			var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
-			grVIC.addQuery('vendor_instance', sidInstance.toString());
-			grVIC.addEncodedQuery("checkin_dateISEMPTY^checkout_date<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')^NQcheckin_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')");
-			if (gdtCheckin != undefined) {
-				grVIC.addEncodedQuery("checkin_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')^ORcheckout_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')");
-			}  // if (gdtCheckin != undefined)
+			this.msg += 'grVIC initialized.' + '\n';
+			var strEQuery = "vendor_instance=" + sidInstance.toString() + "^checkin_dateISEMPTY^checkout_date<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')^NQvendor_instance=" + sidInstance.toString() + "^checkin_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')";
+			this.msg += '(1) strEQuery = ' + strEQuery + '\n';
+			this.msg += "gdtCheckin.getDisplayValue() != ''" + (gdtCheckin.getDisplayValue() != '') + "\n";
+			if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != '')) {
+				strEQuery += "^NQvendor_instance=" + sidInstance.toString() + "^checkin_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')^ORcheckout_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')";
+				this.msg += '(2) strEQuery = ' + strEQuery + '\n';
+			}  // if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != ''))
+			grVIC.addEncodedQuery(strEQuery);
+			this.msg += 'Final grVIC.getEncodedQuery() = ' + grVIC.getEncodedQuery() + '\n';
 			grVIC.query();
+			this.msg += 'grVIC.getRowCount() = ' + grVIC.getRowCount() + '\n';
 			if (grVIC.getRowCount() > 0) {
 				boolIsAvailable = false;
 			}  // if (grVIC.getRowCount() > 0)
 			else {
 				var grVICR = new GlideRecord('x_275826_vim_vendor_instance_checkout_request');
+				this.msg += 'grVICR initialized.' + '\n';
 				grVICR.addQuery('vendor_instance', sidInstance.toString());
-				grVICR.addEncodedQuery("due_dateISEMPTY^expected_start<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')^NQdue_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')");
-				if (gdtCheckin != undefined) {
-					grVICR.addEncodedQuery("due_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')^ORexpected_startBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime() + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime() + "')");
-				}  // if (gdtCheckin != undefined)
+				this.msg += 'vendor_instance query added to grVICR' + '\n';
+				grVICR.addEncodedQuery("due_dateISEMPTY^expected_start<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')^NQdue_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')");
+				this.msg += 'Checkout Encoded Query added to grVICR' + '\n' + '\t' + grVICR.getEncodedQuery() + '\n';
+				if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != '')) {
+					grVICR.addEncodedQuery("due_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')^ORexpected_startBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')");
+					this.msg += 'Checkin Encoded Query added to grVICR' + '\n' + '\t' + grVICR.getEncodedQuery() + '\n';
+				}  // if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != ''))
+				this.msg += 'grVICR.getEncodedQuery() = ' + grVICR.getEncodedQuery() + '\n';
 				grVICR.query();
+				this.msg += 'grVICR.getRowCount() = ' + grVICR.getRowCount() + '\n';
 				if (grVICR.getRowCount() > 0) {
 					boolIsAvailable = false;
 				}  // if (grVICR.getRowCount() > 0)
@@ -90,9 +183,10 @@ VendorInstanceManagementUtils.prototype = {
 		}  // try
 		catch (err) {
 			this.msg += 'Error in checkVendorInstanceAvailability:  ' + err.message + '\n';
-			this.log.logErr();
+			this.log.logErr(this.msg);
 		}  // catch (err)
 		finally {
+			gs.debug(this.msg);
 			if (this.debug) {
 				this.log.logDebug(this.msg);
 			}  // if (this.debug)
@@ -100,12 +194,46 @@ VendorInstanceManagementUtils.prototype = {
 		}  // finally
 	},  // checkVendorInstanceAvailability
 	
+	findVendorInstanceCheckoutConflicts: function (sidInstance  /* sys_id of vendor_instance */, gdtCheckout  /* GlideDateTime */, gdtCheckin  /* GlideDateTime */) {
+		/**************************************
+ 		*****  Check for Vendor Instance  *****
+ 		*****  Checkout records within    *****
+ 		*****  provided dates             *****
+ 		**************************************/
+		this.msg += 'findVendorInstanceCheckoutConflicts(' + sidInstance.toString() + ', ' + gdtCheckout.getDisplayValue() + ', ' + gdtCheckin.getDisplayValue() + ')' + '\n';
+		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
+		try {
+			this.msg += 'grVIC initialized.' + '\n';
+			var strEQuery = "vendor_instance=" + sidInstance.toString() + "^checkin_dateISEMPTY^checkout_date<javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')^NQvendor_instance=" + sidInstance.toString() + "^checkin_date>javascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')";
+			this.msg += '(1) strEQuery = ' + strEQuery + '\n';
+			this.msg += "gdtCheckin.getDisplayValue() != ''" + (gdtCheckin.getDisplayValue() != '') + "\n";
+			if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != '')) {
+				strEQuery += "^NQvendor_instance=" + sidInstance.toString() + "^checkin_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')^ORcheckout_dateBETWEENjavascript:gs.dateGenerate('" + gdtCheckout.getLocalDate() + "','" + gdtCheckout.getLocalTime().getByFormat('hh:mm:ss') + "')@javascript:gs.dateGenerate('" + gdtCheckin.getLocalDate() + "','" + gdtCheckin.getLocalTime().getByFormat('hh:mm:ss') + "')";
+				this.msg += '(2) strEQuery = ' + strEQuery + '\n';
+			}  // if ((gdtCheckin != undefined) && (gdtCheckin.getDisplayValue() != ''))
+			grVIC.addEncodedQuery(strEQuery);
+			this.msg += 'Final grVIC.getEncodedQuery() = ' + grVIC.getEncodedQuery() + '\n';
+			grVIC.query();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in findVendorInstanceCheckoutConflicts:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			gs.debug(this.msg);
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIC;
+		}  // finally		
+	},  // findVendorInstanceCheckoutConflicts
+	
 	findVendorInstanceCheckout: function (sidInstance  /* sys_id of vendor_instance */, gdtCheckout  /* GlideDateTime */, gdtCheckin  /* GlideDateTime */) {
 		/**************************************
  		*****  Find a Vendor Instance     *****
- 		*****  Checkout record for a      *****
+ 		*****  Checkout recordset for a   *****
  		*****  specified Vendor Instance  *****
-		*****  and the provided dates     *****
+ 		*****  and the provided dates     *****
  		**************************************/
 		this.msg += 'findVendorInstanceCheckout(' + sidInstance.toString() + ', ' + gdtCheckout.getDisplayValue() + ', ' + gdtCheckin.getDisplayValue() + ')' + '\n';
 		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
@@ -118,8 +246,8 @@ VendorInstanceManagementUtils.prototype = {
 			grVIC.query();
 		}  // try
 		catch (err) {
-			this.msg += 'Error in createCheckout:  ' + err.message + '\n';
-			this.log.logErr();
+			this.msg += 'Error in findVendorInstanceCheckout:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
 		}  // catch (err)
 		finally {
 			if (this.debug) {
@@ -130,19 +258,188 @@ VendorInstanceManagementUtils.prototype = {
 		
 	},  // findVendorInstanceCheckout
 	
+	findVendorInstanceCheckoutFromTask: function (sidInstance  /* sys_id of vendor_instance */, sidTask  /* sys_id of task */) {
+		/**************************************
+ 		*****  Find a Vendor Instance     *****
+ 		*****  Checkout recordset for a   *****
+ 		*****  specified Vendor Instance  *****
+ 		*****  and task                   *****
+ 		**************************************/
+		this.msg += 'findVendorInstanceCheckoutFromTask(' + sidInstance.toString() + ', ' + sidTask.toString() + ')' + '\n';
+		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
+		try {
+			grVIC.addQuery('vendor_instance', sidInstance.toString());
+			grVIC.addQuery('task', sidTask.toString());
+			grVIC.orderByDesc('checkout_date');
+			grVIC.query();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in findVendorInstanceCheckoutFromTask:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIC;
+		}  // finally
+	},  // findVendorInstanceCheckoutFromTask
+	
+	findVendorInstanceCurrentCheckout: function (sidInstance  /* sys_id of vendor_instance */) {
+		/**************************************
+ 		*****  Find a Vendor Instance     *****
+ 		*****  Checkout record that is    *****
+ 		*****   the current for a Vendor  *****
+ 		*****  Instance                   *****
+ 		**************************************/
+		this.msg += 'findVendorInstanceCurrentCheckout(' + sidInstance.toString() + ')' + '\n';
+		var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
+		try {
+			var grVI = new GlideRecord('x_275826_vim_vendor_instance');
+			grVI.get(sidInstance);
+			this.msg += 'grVI (' + grVI.sys_id.toString() + ') retrieved.  grVI.current_checkout = ' + grVI.current_checkout.toString() + '\n';
+			grVIC.get(grVI.current_checkout.toString());
+		}  // try
+		catch (err) {
+			this.msg += 'Error in findVendorInstanceCurrentCheckout:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			this.msg += 'grVIC.sys_id = ' + grVIC.sys_id.toString() + '\n';
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIC;
+		}  // finally
+	},  // findVendorInstanceCurrentCheckout
+	
+	findActiveVendorInstanceMaintenance: function (sidInstance  /* sys_id of vendor_instance */) {
+		/**************************************
+ 		*****  Find an Vendor Instance    *****
+ 		*****  maintenance record that    *****
+ 		*****  is active for the current  *****
+ 		*****  Vendor Instance            *****
+ 		**************************************/
+		this.msg += 'findActiveVendorInstanceMaintenance(' + sidInstance.toString() + ')' + '\n';
+		var grVIM = new GlideRecord('x_275826_vim_vendor_instance_maintenance');
+		try {
+			grVIM.addActiveQuery();
+			grVIM.addQuery('vendor_instance', sidInstance.toString());
+			grVIM.query();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in findActiveVendorInstanceMaintenance:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			this.msg += 'grVIC.sys_id = ' + grVIC.sys_id.toString() + '\n';
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIM;
+		}  // finally
+	},  // findActiveVendorInstanceMaintenance
+	
+	createVendorInstanceMaintenanceTask: function (sidInstance  /* sys_id of vendor_instance */, intDays  /* integer days in which to complete */) {
+		/**************************************
+ 		*****  Create a task to restore a *****
+ 		*****  Vendor Instance to a ready *****
+ 		*****  state for future use       *****
+ 		**************************************/
+		this.msg += 'createVendorInstanceMaintenanceTask(' + sidInstance.toString() + ')' + '\n';
+		var grVIM = new GlideRecord('x_275826_vim_vendor_instance_maintenance');
+		try {
+			grVIM = this.findActiveVendorInstanceMaintenance(sidInstance);
+			if (!grVIM.next()) {
+				if (intDays == undefined) {
+					intDays = gs.getProperty('x_275826_vim.days_maintenance');
+				}  // if (intDays == undefined)
+				var gdtDue = new GlideDateTime();
+				gdtDue.addDaysLocalTime(intDays);
+				grVIM.initialize();
+				grVIM.vendor_instance = sidInstance.toString();
+				var grVI = this.__getVendorInstance(sidInstance);
+				grVIM.assignment_group = grVI.support_group.toString();
+				grVIM.short_description = 'Review and restore ' + grVI.name.toString() + ' to a ready state for the next checkout.' ;
+				grVIM.due_date = gdtDue.getDisplayValueInternal();
+				grVIM.update();
+			}  // if (!grVIM.next())
+		}  // try
+		catch (err) {
+			this.msg += 'Error in createVendorInstanceMaintenanceTask:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVIM;
+		}  // finally
+	},  // createVendorInstanceMaintenanceTask
+	
+	__getVendorInstanceSupportGroup:  function (sidInstance  /* sys_id of vendor_instance */) {
+		/**************************************
+ 		*****  Returns the sys_id of the  *****
+ 		*****  Support Group for the      *****
+ 		*****  specified Vendor Instance  *****
+ 		**************************************/
+		this.msg += '__getVendorInstanceSupportGroup(' + sidInstance.toString() + ')' + '\n';
+		var sidSupportGroup = '';
+		try {
+			var grVI = new GlideRecord('x_275826_vim_vendor_instance');
+			grVI.get(sidInstance.toString());
+			sidSupportGroup = grVI.support_group.toString();
+		}  // try
+		catch (err) {
+			this.msg += 'Error in __getVendorInstanceSupportGroup:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return sidSupportGroup;
+		}  // finally
+	},  // __getVendorInstanceSupportGroup
+	
+	__getVendorInstance:  function (sidInstance  /* sys_id of vendor_instance */) {
+		/**************************************
+ 		*****  Returns the GlideRecord    *****
+ 		*****  for the specified Vendor   *****
+ 		*****  Instance                   *****
+ 		**************************************/
+		this.msg += '__getVendorInstance(' + sidInstance.toString() + ')' + '\n';
+		var grVI = new GlideRecord('x_275826_vim_vendor_instance');
+		try {
+			grVI.get(sidInstance.toString());
+		}  // try
+		catch (err) {
+			this.msg += 'Error in __getVendorInstance:  ' + err.message + '\n';
+			this.log.logErr(this.msg);
+		}  // catch (err)
+		finally {
+			if (this.debug) {
+				this.log.logDebug(this.msg);
+			}  // if (this.debug)
+			return grVI;
+		}  // finally
+	},  // __getVendorInstanceSupportGroup
+	
 	type: 'VendorInstanceManagementUtils'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-21 13:19:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>1c1881b3db2863007c857fcfbf961999</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>VendorInstanceManagementUtils</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_script_include_1c1881b3db2863007c857fcfbf961999</sys_update_name>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:33:12</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2018-09-26 16:56:01</sys_updated_on>
     </sys_script_include>
 </record_update>
