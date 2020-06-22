@@ -24,7 +24,7 @@
 *****      Activate Debugging     *****
 **************************************/
 var debug = gs.getProperty('glide.installation.production') == true ? false : true;
-// debug = true;    //  manual debug override
+debug = true;    //  manual debug override
 /**************************************
 **************************************/
 
@@ -49,7 +49,7 @@ if (debug) {
         <sys_created_on>2018-09-20 19:29:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>97836dafdbec23007c857fcfbf96198d</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Checkin Vendor Instances</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy/>
@@ -57,7 +57,7 @@ if (debug) {
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sysauto_script_97836dafdbec23007c857fcfbf96198d</sys_update_name>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2020-06-22 13:18:42</sys_updated_on>
+        <sys_updated_on>2020-06-22 19:42:31</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
