@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Task table schema" source="com.glide.task">09dbc0b5db2232008724fe8d0f9619dc</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-10-20 15:54:53</sys_created_on>
+        <sys_id>55041349db15ab80118278f9bf961953</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-10-20 15:54:53</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

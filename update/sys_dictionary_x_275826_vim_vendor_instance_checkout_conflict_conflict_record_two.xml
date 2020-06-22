@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_dictionary action="INSERT_OR_UPDATE" element="conflict_record_two" table="x_275826_vim_vendor_instance_checkout_conflict">
         <active>true</active>
         <array>false</array>
@@ -55,16 +54,16 @@
         <sys_created_by>rpolicko</sys_created_by>
         <sys_created_on>2018-09-26 16:47:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>dee9b755db7c2b00a65afa5aaf961914</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_id>a9041349db15ab80118278f9bf9619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Conflict record two</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_dictionary_x_275826_vim_vendor_instance_checkout_conflict_conflict_record_two</sys_update_name>
-        <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2018-09-26 16:48:03</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-10-20 15:54:58</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

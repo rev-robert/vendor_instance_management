@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="sysevent_email_action">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
     <sysevent_email_action action="INSERT_OR_UPDATE">
         <action_insert>true</action_insert>
         <action_update>false</action_update>
@@ -74,14 +73,6 @@
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
-        <u_buttons/>
-        <u_email_body/>
-        <u_email_subject/>
-        <u_message_text/>
-        <u_recipient_fields/>
-        <u_side_information/>
-        <u_tagline/>
-        <u_use_customize_email>false</u_use_customize_email>
         <weight>0</weight>
     </sysevent_email_action>
 </record_update>

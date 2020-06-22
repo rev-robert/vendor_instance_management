@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sysauto_script">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
     <sysauto_script action="INSERT_OR_UPDATE">
         <active>true</active>
+        <business_calendar/>
         <condition/>
         <conditional>false</conditional>
+        <entered_time/>
         <name>Checkin Vendor Instances</name>
-        <run_as display_value="Robert Polickoski">caf82dd8dbd06f40a65afa5aaf96196f</run_as>
+        <run_as display_value="Robert Polickoski">dce8a910dbd0e7007876f25bbf96199d</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
@@ -19,20 +20,36 @@
 *  Checkout Checkin date is within the threshold set              *
 *******************************************************************
 ******************************************************************/
-var grVIC = new GlideRecord('x_275826_vim_vendor_instance_checkout');
-grVIC.addEncodedQuery("vendor_instance.checked_out=true^checkout_dateRELATIVELE@minute@ahead@" + gs.getProperty('x_275826_vim.vendor_instance_checkin_threshold').toString());
+/**************************************
+*****      Activate Debugging     *****
+**************************************/
+var debug = gs.getProperty('glide.installation.production') == true ? false : true;
+// debug = true;    //  manual debug override
+/**************************************
+**************************************/
+
+
+var logMsg = 'Checkin Vendor Instance' + '\n';
+
+var grVIC = new GlideRecordSecure('x_275826_vim_vendor_instance_checkout');
+grVIC.addEncodedQuery("vendor_instance.checked_out=true^checkin_dateISNOTEMPTY^checkin_dateRELATIVEGE@minute@ago@1^checkin_dateRELATIVELE@minute@ago@" + gs.getProperty('x_275826_vim.vendor_instance_checkin_threshold').toString());
 grVIC.query();
+logMsg += 'grVIC.getEncodedQuery() = ' + grVIC.getEncodedQuery() + '\n' + 'grVIC.getRowCount() = ' + grVIC.getRowCount() + '\n';
 while (grVIC.next()) {
 	var utils = new VendorInstanceManagementUtils();
 	var boolSuccess = utils.checkinInstance(grVIC.vendor_instance.toString());
+	logMsg += '\t' + '(utils.checkinInstance(' + grVIC.vendor_instance.toString() + ')) boolSuccess = ' + boolSuccess.toString() + '\n';
 }  // while (grVIC.next())
+if (debug) {
+	gs.info(logMsg);
+}  // if (this.debug)
 ]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-20 19:29:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>97836dafdbec23007c857fcfbf96198d</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Checkin Vendor Instances</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy/>
@@ -40,7 +57,8 @@ while (grVIC.next()) {
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sysauto_script_97836dafdbec23007c857fcfbf96198d</sys_update_name>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2018-09-26 11:55:57</sys_updated_on>
+        <sys_updated_on>2020-06-22 13:18:42</sys_updated_on>
+        <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

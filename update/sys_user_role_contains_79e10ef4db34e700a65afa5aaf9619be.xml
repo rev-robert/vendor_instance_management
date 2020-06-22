@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_user_role_contains">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
     <sys_user_role_contains action="INSERT_OR_UPDATE">
         <contains display_value="x_275826_vim.vendor_instance_user" name="x_275826_vim.vendor_instance_user">bc0c4dafdbac23007c857fcfbf9619e1</contains>
         <role display_value="x_275826_vim.vendor_instance_maintenance_user" name="x_275826_vim.vendor_instance_maintenance_user">4e9ddd7cdbb0e700a65afa5aaf961974</role>

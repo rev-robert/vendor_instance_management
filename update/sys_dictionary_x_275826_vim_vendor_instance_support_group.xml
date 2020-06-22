@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_dictionary action="INSERT_OR_UPDATE" element="support_group" table="x_275826_vim_vendor_instance">
         <active>true</active>
         <array>false</array>
@@ -57,7 +56,7 @@
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-24 15:30:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>3c2cd9b8dbb0e700a65afa5aaf96195a</sys_id>
+        <sys_id>55041349db15ab80118278f9bf961982</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Support Group</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
@@ -66,7 +65,7 @@
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_dictionary_x_275826_vim_vendor_instance_support_group</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-09-24 16:01:19</sys_updated_on>
+        <sys_updated_on>2018-10-20 15:55:01</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

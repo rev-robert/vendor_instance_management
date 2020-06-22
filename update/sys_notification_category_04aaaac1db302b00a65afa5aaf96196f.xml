@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_notification_category">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_notification_category">
     <sys_notification_category action="INSERT_OR_UPDATE">
         <name>Vendor Instance Management</name>
         <short_description>Notifications for the Vendor Instance Management application</short_description>

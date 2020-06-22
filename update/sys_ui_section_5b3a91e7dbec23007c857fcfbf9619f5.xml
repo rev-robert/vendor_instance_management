@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="Purpose" section_id="5b3a91e7dbec23007c857fcfbf9619f5" sys_domain="global" table="x_275826_vim_vendor_instance" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>primary_purpose</element>

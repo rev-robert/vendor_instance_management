@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_275826_vim_vendor_instance_checkout">
         <active>true</active>
         <array>false</array>
@@ -48,23 +47,23 @@
         <reference_qual/>
         <reference_qual_condition/>
         <reference_type/>
-        <sizeclass/>
+        <sizeclass>31</sizeclass>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
         <sys_created_on>2018-09-20 18:03:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>fc2cd9b8dbb0e700a65afa5aaf961927</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_id>8d041349db15ab80118278f9bf961933</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>x_275826_vim_vendor_instance_checkout</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
-        <sys_update_name>sys_dictionary_x_275826_vim_vendor_instance_checkout_NULL</sys_update_name>
+        <sys_update_name>sys_dictionary_x_275826_vim_vendor_instance_checkout_null</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-09-24 16:01:17</sys_updated_on>
+        <sys_updated_on>2020-06-09 10:35:19</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
