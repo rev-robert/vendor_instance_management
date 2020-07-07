@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Vendor Instance Checkout" max_length="40" name="x_275826_vim_vendor_instance_checkout" sizeclass="31" type="collection">
+    <element label="Vendor Instance Checkout" max_length="40" name="x_275826_vim_vendor_instance_checkout" sizeclass="33" type="collection">
         <element label="Checkin date" max_length="40" name="checkin_date" type="glide_date_time"/>
         <element default="javascript:gs.nowDateTime();" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Checkout date" mandatory="true" max_length="40" name="checkout_date" type="glide_date_time" use_dynamic_default="true"/>
         <element display="true" label="Display" max_length="128" name="display" read_only="true" type="string"/>
         <element label="Notes" max_length="4000" name="notes" type="journal"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Project or task" max_length="32" name="task" reference="task" type="reference"/>
         <element default="javascript:gs.getUser();" label="User" mandatory="true" max_length="32" name="user" reference="sys_user" reference_qual="active=true^locked_out=false^roles=x_275826_vim.vendor_instance_user^EQ" reference_qual_condition="active=true^locked_out=false^roles=x_275826_vim.vendor_instance_user^EQ" type="reference"/>
         <element label="Vendor Instance" mandatory="true" max_length="32" name="vendor_instance" reference="x_275826_vim_vendor_instance" reference_qual="checked_out=false^EQ" reference_qual_condition="checked_out=false^EQ" type="reference"/>

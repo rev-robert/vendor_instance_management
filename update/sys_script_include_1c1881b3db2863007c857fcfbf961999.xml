@@ -39,6 +39,7 @@ VendorInstanceManagementUtils.prototype = {
 			grVI.checked_out = true;
 			grVI.current_checkout = sidCheckout.toString();
 			grVI.update();
+			this.msg += 'Vendor Instance ' + grVI.number.toString() + ' has been checked out. (checkedOut = ' + grVI.checked_out.toString() + '; current_checkout = ' + grVI.current_checkout + ')' + '\n';
 		}  // try
 		catch (err) {
 			this.msg += 'Error in checkoutInstance:  ' + err.message + '\n';
@@ -66,6 +67,7 @@ VendorInstanceManagementUtils.prototype = {
 			grVI.checked_out = false;
 			grVI.current_checkout = '';
 			grVI.update();
+			this.msg += 'Vendor Instance ' + grVI.number.toString() + ' has been checked in. (checkedOut = ' + grVI.checked_out.toString() + '; current_checkout = ' + grVI.current_checkout + ')' + '\n';
 		}  // try
 		catch (err) {
 			this.msg += 'Error in checkinInstance:  ' + err.message + '\n';
@@ -118,12 +120,13 @@ VendorInstanceManagementUtils.prototype = {
  		*****  Checkout record with a new *****
  		*****  checkin date               *****
  		**************************************/
-		this.msg += 'updateCheckinDate(' + sidCheckout.toString() + ', ' + gdtCheckin.getDisplayValue() + ')' + '\n';
+		this.msg += 'updateCheckinDate(' + sidCheckout.toString() + ', ' + gdtCheckin.getDisplayValue() + ' [' + gdtCheckin.getDisplayValueInternal() + '])' + '\n';
 		var grVIC = new GlideRecordSecure('x_275826_vim_vendor_instance_checkout');
 		try {
 			grVIC.get(sidCheckout);
 			grVIC.checkin_date = gdtCheckin.getDisplayValueInternal();
 			grVIC.update();
+			this.msg += 'Vendor Instance Checkout' + grVIC.number.toString() + ' has had the Checkin Date updated. (checkin_date = ' + grVIC.checkin_date.getDisplayValue() + ')' + '\n';
 		}  // try
 		catch (err) {
 			this.msg += 'Error in updateCheckinDate:  ' + err.message + '\n';
@@ -332,7 +335,7 @@ VendorInstanceManagementUtils.prototype = {
 			this.log.logErr(this.msg);
 		}  // catch (err)
 		finally {
-			this.msg += 'grVIC.sys_id = ' + grVIC.sys_id.toString() + '\n';
+			this.msg += 'grVIM.sys_id = ' + grVIM.sys_id.toString() + '\n';
 			if (this.debug) {
 				this.log.logDebug(this.msg);
 			}  // if (this.debug)
@@ -432,7 +435,7 @@ VendorInstanceManagementUtils.prototype = {
         <sys_created_on>2018-09-21 13:19:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1c1881b3db2863007c857fcfbf961999</sys_id>
-        <sys_mod_count>63</sys_mod_count>
+        <sys_mod_count>67</sys_mod_count>
         <sys_name>VendorInstanceManagementUtils</sys_name>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy>read</sys_policy>
@@ -440,6 +443,6 @@ VendorInstanceManagementUtils.prototype = {
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_script_include_1c1881b3db2863007c857fcfbf961999</sys_update_name>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2020-06-19 19:10:26</sys_updated_on>
+        <sys_updated_on>2020-07-01 19:20:08</sys_updated_on>
     </sys_script_include>
 </record_update>

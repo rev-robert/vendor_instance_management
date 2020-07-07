@@ -28,9 +28,16 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var msg = 'Create Maintenance Task - ' + current.number.toString() + '\n';
 
 	var utils = new VendorInstanceManagementUtils();
+	msg += 'VendorInstanceManagementUtils instantiated as utils' + '\n';
 	var grVIM = utils.createVendorInstanceMaintenanceTask(current.sys_id.toString());
+	msg += 'utils.createVendorInstanceMaintenanceTask(' + current.sys_id.toString() + ') returned ' + grVIM.number.toString() + '\n';
+	if (gs.getProperty('glide.installation.production')) {
+		var log = new global.GSLog('x_275826_vim.com.vim.log','Create Maintenance Task');
+		log.logDebug(msg);
+	}  // if (gs.getProperty('glide.installation.production'))
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -40,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8277317cdbf0e700a65afa5aaf96199c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Create Maintenance Task</sys_name>
         <sys_overrides/>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
@@ -49,7 +56,7 @@
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_script_8277317cdbf0e700a65afa5aaf96199c</sys_update_name>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2018-09-25 11:53:45</sys_updated_on>
+        <sys_updated_on>2020-07-01 20:05:40</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

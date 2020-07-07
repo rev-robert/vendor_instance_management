@@ -21,7 +21,7 @@
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Create Vendor Instance Checkout</name>
+        <name>Vendor Instance Maintenance Checkout</name>
         <order>1000</order>
         <priority>100</priority>
         <rest_method/>
@@ -31,11 +31,19 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	gs.addInfoMessage('Creating Instance Checkout');
+	var msg = 'Vendor Instance Maintenance Checkout - ' + current.number.toString() + '\n';
 	var utils = new VendorInstanceManagementUtils();
+	msg += 'VendorInstanceManagementUtils instantiated as utils' + '\n';
 	var gdtNow = new GlideDateTime();
+	msg += 'gdtNow created:  ' + gdtNow.getDisplayValue() + '\n';
 	var gdtDue = new GlideDateTime(current.due_date.getDisplayValue());
+	msg += 'gdtDue created:  ' + gdtDue.getDisplayValue() + '\n';
 	var grVIC = utils.createCheckout(current.vendor_instance.toString(), current.assigned_to.toString(), gdtNow, gdtDue, current.sys_id.toString());
+	msg += 'utils.createCheckout(' + current.vendor_instance.toString() + ', ' + current.assigned_to.toString() + ', ' + gdtNow.getDisplayValue() + ', ' + gdtDue.getDisplayValue() + ', ' + current.sys_id.toString() + ') returned ' + grVIM.number.toString() + '\n';
+	if (gs.getProperty('glide.installation.production')) {
+		var log = new global.GSLog('x_275826_vim.com.vim.log','Create Vendor Instance Checkout');
+		log.logDebug(msg);
+	}  // if (gs.getProperty('glide.installation.production'))
 	
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -45,8 +53,8 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f11b39b0db34e700a65afa5aaf961926</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Create Vendor Instance Checkout</sys_name>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Vendor Instance Maintenance Checkout</sys_name>
         <sys_overrides/>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy/>
@@ -54,7 +62,7 @@
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_script_f11b39b0db34e700a65afa5aaf961926</sys_update_name>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2018-09-25 12:21:50</sys_updated_on>
+        <sys_updated_on>2020-07-07 18:11:40</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

@@ -33,10 +33,15 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	
+	var msg = 'Checkin Vendor Instance - ' + current.number.toString() + '\n';
 	var utils = new VendorInstanceManagementUtils();
+	msg += 'VendorInstanceManagementUtils instantiated as utils' + '\n';
 	var boolSuccess = utils.checkinInstance(current.vendor_instance.toString());
-	
+	msg += 'utils.checkinInstance(' + current.vendor_instance.toString() + ') returned ' + boolSuccess.toString() + '\n';
+	if (gs.getProperty('glide.installation.production')) {
+		var log = new global.GSLog('x_275826_vim.com.vim.log','Checkin Vendor Instance');
+		log.logDebug(msg);
+	}  // if (gs.getProperty('glide.installation.production'))
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>robert.polickoski</sys_created_by>
@@ -45,7 +50,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cf406d2fdbec23007c857fcfbf9619c3</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Checkin Vendor Instance</sys_name>
         <sys_overrides/>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
@@ -54,7 +59,7 @@
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
         <sys_update_name>sys_script_cf406d2fdbec23007c857fcfbf9619c3</sys_update_name>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2019-02-12 18:33:57</sys_updated_on>
+        <sys_updated_on>2020-07-01 19:57:21</sys_updated_on>
         <template>vendor_instance.checked_out=false^vendor_instance.current_checkout=^EQ</template>
         <when>after</when>
     </sys_script>
