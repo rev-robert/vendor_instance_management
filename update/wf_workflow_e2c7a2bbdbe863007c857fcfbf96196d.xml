@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
     <wf_workflow_version action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_stages>{"subflows":[],"activities":{},"stages":{},"ends":["2ec7a2bbdbe863007c857fcfbf96196f"]}</activity_stages>
+        <activity_stages>{"subflows":[],"activities":{},"stages":{},"ends":["401273aa1b791410324d8734ec4bcb00"]}</activity_stages>
         <after_business_rules>false</after_business_rules>
         <checked_out/>
         <checked_out_by/>
@@ -9,10 +9,10 @@
         <condition/>
         <condition_type>run_match</condition_type>
         <description>Workflow for processing a request to checkout a Vendor Instance</description>
-        <expected_sequences>26c7a2bbdbe863007c857fcfbf96196e,eaf7eabbdbe863007c857fcfbf96198c,b959e6bbdbe863007c857fcfbf961957,614aeafbdbe863007c857fcfbf961900,2ec7a2bbdbe863007c857fcfbf96196f</expected_sequences>
+        <expected_sequences>801233aa1b791410324d8734ec4bcbff,c41273aa1b791410324d8734ec4bcb09,401273aa1b791410324d8734ec4bcb07,041273aa1b791410324d8734ec4bcb06,401273aa1b791410324d8734ec4bcb00</expected_sequences>
         <expected_time>1970-01-01 14:00:00</expected_time>
         <expected_time_type/>
-        <full_sequences>26c7a2bbdbe863007c857fcfbf96196e,eaf7eabbdbe863007c857fcfbf96198c,b959e6bbdbe863007c857fcfbf961957,fa8c6abbdbe863007c857fcfbf961960,614aeafbdbe863007c857fcfbf961900,13cc223fdbe863007c857fcfbf9619a7,2ec7a2bbdbe863007c857fcfbf96196f,39707e7fdbe863007c857fcfbf96198f,ba8da23fdbe863007c857fcfbf961932,08cde67fdbe863007c857fcfbf96196e</full_sequences>
+        <full_sequences>801233aa1b791410324d8734ec4bcbff,c41273aa1b791410324d8734ec4bcb09,401273aa1b791410324d8734ec4bcb07,801273aa1b791410324d8734ec4bcb0b,041273aa1b791410324d8734ec4bcb06,cc12f76a1b791410324d8734ec4bcbe3,401273aa1b791410324d8734ec4bcb00,cc1273aa1b791410324d8734ec4bcb00,041273aa1b791410324d8734ec4bcb08,0012f76a1b791410324d8734ec4bcbe2</full_sequences>
         <journal/>
         <max_activity_count>100</max_activity_count>
         <name>Vendor Instance Checkout Request</name>
@@ -27,16 +27,16 @@
         <schedule/>
         <stage_field/>
         <stage_order>computed</stage_order>
-        <start display_value="Begin">26c7a2bbdbe863007c857fcfbf96196e</start>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 18:57:50</sys_created_on>
-        <sys_id>2e67a2bbdbe863007c857fcfbf9619d9</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <start display_value="Begin">801233aa1b791410324d8734ec4bcbff</start>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>8812f76a1b791410324d8734ec4bcbdf</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2018-09-25 13:05:39</sys_updated_on>
+        <sys_updated_on>2020-07-07 19:02:59</sys_updated_on>
         <table>x_275826_vim_vendor_instance_checkout_request</table>
         <timezone/>
-        <validated>true</validated>
+        <validated>false</validated>
         <workflow display_value="Vendor Instance Checkout Request">e2c7a2bbdbe863007c857fcfbf96196d</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">
@@ -80,22 +80,22 @@
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 18:57:51</sys_created_on>
-        <sys_id>26c7a2bbdbe863007c857fcfbf96196e</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>801233aa1b791410324d8734ec4bcbff</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 18:57:51</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="Vendor Instance Checkout Request">2e67a2bbdbe863007c857fcfbf9619d9</workflow_version>
+        <workflow_version display_value="Vendor Instance Checkout Request">8812f76a1b791410324d8734ec4bcbdf</workflow_version>
         <x>20</x>
         <y>20</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=26c7a2bbdbe863007c857fcfbf96196e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=801233aa1b791410324d8734ec4bcbff"/>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Begin">26c7a2bbdbe863007c857fcfbf96196e</activity>
+        <activity display_value="Begin">801233aa1b791410324d8734ec4bcbff</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -108,12 +108,12 @@
         <order>0</order>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 18:57:51</sys_created_on>
-        <sys_id>a2c7a2bbdbe863007c857fcfbf96196f</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c81233aa1b791410324d8734ec4bcbff</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 18:57:51</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -130,31 +130,31 @@
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:05:49</sys_created_on>
-        <sys_id>b959e6bbdbe863007c857fcfbf961957</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:46:48</sys_updated_on>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>401273aa1b791410324d8734ec4bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Vendor Instance Checkout Request">2e67a2bbdbe863007c857fcfbf9619d9</workflow_version>
+        <workflow_version display_value="Vendor Instance Checkout Request">8812f76a1b791410324d8734ec4bcbdf</workflow_version>
         <x>335</x>
         <y>141</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=b959e6bbdbe863007c857fcfbf961957"/>
+    <sys_variable_value action="delete_multiple" query="document_key=401273aa1b791410324d8734ec4bcb07"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>b959e6bbdbe863007c857fcfbf961957</document_key>
+        <document_key>401273aa1b791410324d8734ec4bcb07</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:05:49</sys_created_on>
-        <sys_id>df99e6fbdbe863007c857fcfbf9619a7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:08:31</sys_updated_on>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c41273aa1b791410324d8734ec4bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>var utils = new VendorInstanceManagementUtils();&#13;
 var gdtCheckout = new GlideDateTime(current.expected_start.getDisplayValue());&#13;
 var gdtCheckin = new GlideDateTime(current.due_date.getDisplayValue());&#13;
@@ -164,15 +164,15 @@ utils.createCheckout(current.vendor_instance  /* sys_id of vendor_instance */, c
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>b959e6bbdbe863007c857fcfbf961957</document_key>
+        <document_key>401273aa1b791410324d8734ec4bcb07</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:05:49</sys_created_on>
-        <sys_id>df99e6fbdbe863007c857fcfbf9619a7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:08:31</sys_updated_on>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c41273aa1b791410324d8734ec4bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>var utils = new VendorInstanceManagementUtils();&#13;
 var gdtCheckout = new GlideDateTime(current.expected_start.getDisplayValue());&#13;
 var gdtCheckin = new GlideDateTime(current.due_date.getDisplayValue());&#13;
@@ -181,7 +181,7 @@ utils.createCheckout(current.vendor_instance  /* sys_id of vendor_instance */, c
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Create Vendor Instance Checkout">b959e6bbdbe863007c857fcfbf961957</activity>
+        <activity display_value="Create Vendor Instance Checkout">401273aa1b791410324d8734ec4bcb07</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -194,12 +194,12 @@ utils.createCheckout(current.vendor_instance  /* sys_id of vendor_instance */, c
         <order>0</order>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:05:49</sys_created_on>
-        <sys_id>1b99e6fbdbe863007c857fcfbf9619a8</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4c1273aa1b791410324d8734ec4bcb07</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:05:49</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
@@ -216,20 +216,20 @@ utils.createCheckout(current.vendor_instance  /* sys_id of vendor_instance */, c
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 18:57:51</sys_created_on>
-        <sys_id>2ec7a2bbdbe863007c857fcfbf96196f</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:47:56</sys_updated_on>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>401273aa1b791410324d8734ec4bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="Vendor Instance Checkout Request">2e67a2bbdbe863007c857fcfbf9619d9</workflow_version>
+        <workflow_version display_value="Vendor Instance Checkout Request">8812f76a1b791410324d8734ec4bcbdf</workflow_version>
         <x>730</x>
         <y>347</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=2ec7a2bbdbe863007c857fcfbf96196f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=401273aa1b791410324d8734ec4bcb00"/>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Create Task">9f4d1be5c0a8016400043d34ce066316</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
@@ -245,658 +245,326 @@ utils.createCheckout(current.vendor_instance  /* sys_id of vendor_instance */, c
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>39707e7fdbe863007c857fcfbf96198f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:45:06</sys_updated_on>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>cc1273aa1b791410324d8734ec4bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Vendor Instance Checkout Request">2e67a2bbdbe863007c857fcfbf9619d9</workflow_version>
+        <workflow_version display_value="Vendor Instance Checkout Request">8812f76a1b791410324d8734ec4bcbdf</workflow_version>
         <x>267</x>
         <y>377</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=39707e7fdbe863007c857fcfbf96198f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=cc1273aa1b791410324d8734ec4bcb00"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>40</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>116236ffdbe863007c857fcfbf96190c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value>1</value>
-        <variable display_value="">c35e5fc70a0a0ba96248a7091af61d11</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>710</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>156236ffdbe863007c857fcfbf96190b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ed4dbbec0a800664dbecf404d2c7ccd</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1400</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>156236ffdbe863007c857fcfbf96190e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e176c0a0a0ba96248a7090e235011</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>10</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>196236ffdbe863007c857fcfbf96190d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value>task</value>
-        <variable display_value="">c35ddb660a0a0ba96248a7095d22925c</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>400</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>1d6236ffdbe863007c857fcfbf96190c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
-        <variable display_value="">8ec7a5dbc0a80066187fa7acf3778705</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>516236ffdbe863007c857fcfbf96190b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e07ae0a0a0ba96248a7097c81317c</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1710</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>516236ffdbe863007c857fcfbf96190e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value>// Set values for the task in this script.  Use the variable 'task' when setting additional values.&#13;
-// Note: This script is run after the task values are set using the Fields, Template or Values you have specified.&#13;
-//&#13;
-// For example:&#13;
-var gdtDueDate = new GlideDateTime(current.expected_start.getDisplayValueInternal());&#13;
-gdtDueDate.addDaysLocalTime(-1);&#13;
-task.short_description = 'Resolve Vendor Instance Checkout Conflicts';&#13;
-task.due_date = gdtDueDate.getDisplayValueInternal();&#13;
-task.assigned_to = current.vendor_instance.manager;&#13;
-&#13;
-</value>
-        <variable display_value="">989cdb20c0a800661789b3de0f40214a</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>300</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>556236ffdbe863007c857fcfbf96190d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ec61405c0a800661755b30be4ff8fcd</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1600</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>596236ffdbe863007c857fcfbf96190c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35dd7a80a0a0ba96248a709f45ae01b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>700</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>5d6236ffdbe863007c857fcfbf96190b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ed08869c0a800662aafc17e09975bb3</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>720</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>5d6236ffdbe863007c857fcfbf96190e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ed32275c0a800665d67078e699a171f</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>20</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>916236ffdbe863007c857fcfbf96190d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e49040a0a0ba96248a709c2b3780b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>250</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>956236ffdbe863007c857fcfbf96190c</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>001273aa1b791410324d8734ec4bcb03</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">c35e03850a0a0ba96248a709503bd0c4</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>600</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>996236ffdbe863007c857fcfbf96190a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ecbeba5c0a8006672d676cd11dfa881</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>1300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>996236ffdbe863007c857fcfbf96190b</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>041273aa1b791410324d8734ec4bcb02</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">c35e10720a0a0ba96248a709d48d0894</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>996236ffdbe863007c857fcfbf96190e</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>041273aa1b791410324d8734ec4bcb05</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">8ec1dbcec0a800662abc511f1daedc1d</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>1700</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>9d6236ffdbe863007c857fcfbf96190a</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>081273aa1b791410324d8734ec4bcb01</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>1</value>
         <variable display_value="">989c45c8c0a8006676efffafaa6d7442</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>1000</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>9d6236ffdbe863007c857fcfbf96190d</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>081273aa1b791410324d8734ec4bcb04</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>Fields</value>
         <variable display_value="">c35dfee20a0a0ba96248a709f3a40869</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>0c1273aa1b791410324d8734ec4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35e49040a0a0ba96248a709c2b3780b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>401273aa1b791410324d8734ec4bcb02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35e45aa0a0a0ba96248a709f3af7bac</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>610</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>401273aa1b791410324d8734ec4bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ecf789cc0a8006652fc30aae937c5aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>441273aa1b791410324d8734ec4bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ecbeba5c0a8006672d676cd11dfa881</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>620</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>441273aa1b791410324d8734ec4bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="">8eda2a35c0a800660f7aef7be752bf0b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>481273aa1b791410324d8734ec4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35e0c980a0a0ba96248a70916cbc62e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>2000</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>d16236ffdbe863007c857fcfbf96190c</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4c1273aa1b791410324d8734ec4bcb02</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>// Set 'answer' to the number of seconds this timer should wait&#13;
 answer = 0;</value>
         <variable display_value="">8eca692cc0a80066783fefee57143a1a</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1500</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>d56236ffdbe863007c857fcfbf96190b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e45aa0a0a0ba96248a709f3af7bac</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>610</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>d56236ffdbe863007c857fcfbf96190e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ecf789cc0a8006652fc30aae937c5aa</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>620</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>d96236ffdbe863007c857fcfbf96190d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
-        <variable display_value="">8eda2a35c0a800660f7aef7be752bf0b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>dd6236ffdbe863007c857fcfbf96190c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e0c980a0a0ba96248a70916cbc62e</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>10</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>196236ffdbe863007c857fcfbf96190d</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>801273aa1b791410324d8734ec4bcb04</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>task</value>
         <variable display_value="">c35ddb660a0a0ba96248a7095d22925c</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>20</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>916236ffdbe863007c857fcfbf96190d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e49040a0a0ba96248a709c2b3780b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>40</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>116236ffdbe863007c857fcfbf96190c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value>1</value>
-        <variable display_value="">c35e5fc70a0a0ba96248a7091af61d11</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>996236ffdbe863007c857fcfbf96190e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ec1dbcec0a800662abc511f1daedc1d</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>250</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>956236ffdbe863007c857fcfbf96190c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e03850a0a0ba96248a709503bd0c4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>300</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>556236ffdbe863007c857fcfbf96190d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ec61405c0a800661755b30be4ff8fcd</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>400</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>1d6236ffdbe863007c857fcfbf96190c</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>841273aa1b791410324d8734ec4bcb03</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
         <variable display_value="">8ec7a5dbc0a80066187fa7acf3778705</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>600</order>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>40</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>996236ffdbe863007c857fcfbf96190a</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>881273aa1b791410324d8734ec4bcb02</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ecbeba5c0a8006672d676cd11dfa881</variable>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">c35e5fc70a0a0ba96248a7091af61d11</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>610</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>d56236ffdbe863007c857fcfbf96190e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ecf789cc0a8006652fc30aae937c5aa</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>620</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>d96236ffdbe863007c857fcfbf96190d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
-        <variable display_value="">8eda2a35c0a800660f7aef7be752bf0b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>700</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>5d6236ffdbe863007c857fcfbf96190b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ed08869c0a800662aafc17e09975bb3</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>710</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>156236ffdbe863007c857fcfbf96190b</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>8c1273aa1b791410324d8734ec4bcb01</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">8ed4dbbec0a800664dbecf404d2c7ccd</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>720</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>5d6236ffdbe863007c857fcfbf96190e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">8ed32275c0a800665d67078e699a171f</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1000</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>9d6236ffdbe863007c857fcfbf96190d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value>Fields</value>
-        <variable display_value="">c35dfee20a0a0ba96248a709f3a40869</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>516236ffdbe863007c857fcfbf96190b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e07ae0a0a0ba96248a7097c81317c</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>dd6236ffdbe863007c857fcfbf96190c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e0c980a0a0ba96248a70916cbc62e</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1300</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>996236ffdbe863007c857fcfbf96190b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e10720a0a0ba96248a709d48d0894</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>1400</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>156236ffdbe863007c857fcfbf96190e</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>8c1273aa1b791410324d8734ec4bcb04</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">c35e176c0a0a0ba96248a7090e235011</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1500</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>d56236ffdbe863007c857fcfbf96190b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e45aa0a0a0ba96248a709f3af7bac</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>1600</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>596236ffdbe863007c857fcfbf96190c</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c01273aa1b791410324d8734ec4bcb03</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">c35dd7a80a0a0ba96248a709f45ae01b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
-        <order>1700</order>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>700</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>9d6236ffdbe863007c857fcfbf96190a</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c41273aa1b791410324d8734ec4bcb02</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
-        <value>1</value>
-        <variable display_value="">989c45c8c0a8006676efffafaa6d7442</variable>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ed08869c0a800662aafc17e09975bb3</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>720</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c41273aa1b791410324d8734ec4bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ed32275c0a800665d67078e699a171f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c81273aa1b791410324d8734ec4bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35e07ae0a0a0ba96248a7097c81317c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>1710</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>516236ffdbe863007c857fcfbf96190e</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c81273aa1b791410324d8734ec4bcb04</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>// Set values for the task in this script.  Use the variable 'task' when setting additional values.&#13;
 // Note: This script is run after the task values are set using the Fields, Template or Values you have specified.&#13;
 //&#13;
@@ -912,21 +580,353 @@ task.assigned_to = current.vendor_instance.manager;&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>39707e7fdbe863007c857fcfbf96198f</document_key>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>cc1273aa1b791410324d8734ec4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ec61405c0a800661755b30be4ff8fcd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>801273aa1b791410324d8734ec4bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>task</value>
+        <variable display_value="">c35ddb660a0a0ba96248a7095d22925c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>0c1273aa1b791410324d8734ec4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35e49040a0a0ba96248a709c2b3780b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>40</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>881273aa1b791410324d8734ec4bcb02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">c35e5fc70a0a0ba96248a7091af61d11</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>041273aa1b791410324d8734ec4bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ec1dbcec0a800662abc511f1daedc1d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>250</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>001273aa1b791410324d8734ec4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35e03850a0a0ba96248a709503bd0c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>cc1273aa1b791410324d8734ec4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ec61405c0a800661755b30be4ff8fcd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>841273aa1b791410324d8734ec4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="">8ec7a5dbc0a80066187fa7acf3778705</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>441273aa1b791410324d8734ec4bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ecbeba5c0a8006672d676cd11dfa881</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>610</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>401273aa1b791410324d8734ec4bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ecf789cc0a8006652fc30aae937c5aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>620</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>441273aa1b791410324d8734ec4bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="">8eda2a35c0a800660f7aef7be752bf0b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c41273aa1b791410324d8734ec4bcb02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ed08869c0a800662aafc17e09975bb3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>710</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>8c1273aa1b791410324d8734ec4bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ed4dbbec0a800664dbecf404d2c7ccd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>720</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c41273aa1b791410324d8734ec4bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">8ed32275c0a800665d67078e699a171f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>081273aa1b791410324d8734ec4bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>Fields</value>
+        <variable display_value="">c35dfee20a0a0ba96248a709f3a40869</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c81273aa1b791410324d8734ec4bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35e07ae0a0a0ba96248a7097c81317c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>481273aa1b791410324d8734ec4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35e0c980a0a0ba96248a70916cbc62e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>041273aa1b791410324d8734ec4bcb02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35e10720a0a0ba96248a709d48d0894</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>8c1273aa1b791410324d8734ec4bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35e176c0a0a0ba96248a7090e235011</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>401273aa1b791410324d8734ec4bcb02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35e45aa0a0a0ba96248a709f3af7bac</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c01273aa1b791410324d8734ec4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">c35dd7a80a0a0ba96248a709f45ae01b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>081273aa1b791410324d8734ec4bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">989c45c8c0a8006676efffafaa6d7442</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
+        <order>1710</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c81273aa1b791410324d8734ec4bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>// Set values for the task in this script.  Use the variable 'task' when setting additional values.&#13;
+// Note: This script is run after the task values are set using the Fields, Template or Values you have specified.&#13;
+//&#13;
+// For example:&#13;
+var gdtDueDate = new GlideDateTime(current.expected_start.getDisplayValueInternal());&#13;
+gdtDueDate.addDaysLocalTime(-1);&#13;
+task.short_description = 'Resolve Vendor Instance Checkout Conflicts';&#13;
+task.due_date = gdtDueDate.getDisplayValueInternal();&#13;
+task.assigned_to = current.vendor_instance.manager;&#13;
+&#13;
+</value>
+        <variable display_value="">989cdb20c0a800661789b3de0f40214a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc1273aa1b791410324d8734ec4bcb00</document_key>
         <order>2000</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>d16236ffdbe863007c857fcfbf96190c</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4c1273aa1b791410324d8734ec4bcb02</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>// Set 'answer' to the number of seconds this timer should wait&#13;
 answer = 0;</value>
         <variable display_value="">8eca692cc0a80066783fefee57143a1a</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Resolve Vendor Instance Checkout Conflicts">39707e7fdbe863007c857fcfbf96198f</activity>
+        <activity display_value="Resolve Vendor Instance Checkout Conflicts">cc1273aa1b791410324d8734ec4bcb00</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -939,12 +939,12 @@ answer = 0;</value>
         <order>0</order>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:11</sys_created_on>
-        <sys_id>556236ffdbe863007c857fcfbf96190f</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4c1273aa1b791410324d8734ec4bcb05</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Approval Action">50a78fa50a6a803f66d064255f7201a5</activity_definition>
@@ -961,50 +961,50 @@ answer = 0;</value>
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:19:01</sys_created_on>
-        <sys_id>fa8c6abbdbe863007c857fcfbf961960</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:19:35</sys_updated_on>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>801273aa1b791410324d8734ec4bcb0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Vendor Instance Checkout Request">2e67a2bbdbe863007c857fcfbf9619d9</workflow_version>
+        <workflow_version display_value="Vendor Instance Checkout Request">8812f76a1b791410324d8734ec4bcbdf</workflow_version>
         <x>28</x>
         <y>256</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=fa8c6abbdbe863007c857fcfbf961960"/>
+    <sys_variable_value action="delete_multiple" query="document_key=801273aa1b791410324d8734ec4bcb0b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>fa8c6abbdbe863007c857fcfbf961960</document_key>
+        <document_key>801273aa1b791410324d8734ec4bcb0b</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:19:01</sys_created_on>
-        <sys_id>f0ac623fdbe863007c857fcfbf961990</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>041273aa1b791410324d8734ec4bcb0b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:19:01</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>requested</value>
         <variable display_value="">50ab35f70a6a803f76d36e1ebaf3639e</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>fa8c6abbdbe863007c857fcfbf961960</document_key>
+        <document_key>801273aa1b791410324d8734ec4bcb0b</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:19:01</sys_created_on>
-        <sys_id>f0ac623fdbe863007c857fcfbf961990</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>041273aa1b791410324d8734ec4bcb0b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:19:01</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>requested</value>
         <variable display_value="">50ab35f70a6a803f76d36e1ebaf3639e</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Set Approval Requested">fa8c6abbdbe863007c857fcfbf961960</activity>
+        <activity display_value="Set Approval Requested">801273aa1b791410324d8734ec4bcb0b</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -1017,12 +1017,12 @@ answer = 0;</value>
         <order>0</order>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:19:01</sys_created_on>
-        <sys_id>3cac623fdbe863007c857fcfbf961990</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>081273aa1b791410324d8734ec4bcb0b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:19:01</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Set Values">1ca8d7cf0a0a0b265e9a000c2c08248c</activity_definition>
@@ -1039,50 +1039,50 @@ answer = 0;</value>
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:09:05</sys_created_on>
-        <sys_id>614aeafbdbe863007c857fcfbf961900</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:47:15</sys_updated_on>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>041273aa1b791410324d8734ec4bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Vendor Instance Checkout Request">2e67a2bbdbe863007c857fcfbf9619d9</workflow_version>
+        <workflow_version display_value="Vendor Instance Checkout Request">8812f76a1b791410324d8734ec4bcbdf</workflow_version>
         <x>576</x>
         <y>190</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=614aeafbdbe863007c857fcfbf961900"/>
+    <sys_variable_value action="delete_multiple" query="document_key=041273aa1b791410324d8734ec4bcb06"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>614aeafbdbe863007c857fcfbf961900</document_key>
+        <document_key>041273aa1b791410324d8734ec4bcb06</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:09:05</sys_created_on>
-        <sys_id>135a623fdbe863007c857fcfbf9619fe</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>841273aa1b791410324d8734ec4bcb06</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:09:05</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>state=3^EQ</value>
         <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>614aeafbdbe863007c857fcfbf961900</document_key>
+        <document_key>041273aa1b791410324d8734ec4bcb06</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:09:05</sys_created_on>
-        <sys_id>135a623fdbe863007c857fcfbf9619fe</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>841273aa1b791410324d8734ec4bcb06</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:09:05</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>state=3^EQ</value>
         <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Set Closed">614aeafbdbe863007c857fcfbf961900</activity>
+        <activity display_value="Set Closed">041273aa1b791410324d8734ec4bcb06</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -1095,12 +1095,12 @@ answer = 0;</value>
         <order>0</order>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:09:05</sys_created_on>
-        <sys_id>5b5a623fdbe863007c857fcfbf9619fe</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>881273aa1b791410324d8734ec4bcb06</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:09:05</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Set Values">1ca8d7cf0a0a0b265e9a000c2c08248c</activity_definition>
@@ -1117,50 +1117,50 @@ answer = 0;</value>
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:24:36</sys_created_on>
-        <sys_id>08cde67fdbe863007c857fcfbf96196e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:47:45</sys_updated_on>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>0012f76a1b791410324d8734ec4bcbe2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Vendor Instance Checkout Request">2e67a2bbdbe863007c857fcfbf9619d9</workflow_version>
+        <workflow_version display_value="Vendor Instance Checkout Request">8812f76a1b791410324d8734ec4bcbdf</workflow_version>
         <x>584</x>
         <y>483</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=08cde67fdbe863007c857fcfbf96196e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0012f76a1b791410324d8734ec4bcbe2"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>08cde67fdbe863007c857fcfbf96196e</document_key>
+        <document_key>0012f76a1b791410324d8734ec4bcbe2</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:24:36</sys_created_on>
-        <sys_id>d2ed623fdbe863007c857fcfbf961993</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4812f76a1b791410324d8734ec4bcbe2</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:24:36</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>state=4^EQ</value>
         <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>08cde67fdbe863007c857fcfbf96196e</document_key>
+        <document_key>0012f76a1b791410324d8734ec4bcbe2</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:24:36</sys_created_on>
-        <sys_id>d2ed623fdbe863007c857fcfbf961993</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4812f76a1b791410324d8734ec4bcbe2</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:24:36</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>state=4^EQ</value>
         <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Set Closed Incomplete">08cde67fdbe863007c857fcfbf96196e</activity>
+        <activity display_value="Set Closed Incomplete">0012f76a1b791410324d8734ec4bcbe2</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -1173,12 +1173,12 @@ answer = 0;</value>
         <order>0</order>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:24:36</sys_created_on>
-        <sys_id>9aed623fdbe863007c857fcfbf961993</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4412f76a1b791410324d8734ec4bcbe3</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:24:36</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Approval Action">50a78fa50a6a803f66d064255f7201a5</activity_definition>
@@ -1195,50 +1195,50 @@ answer = 0;</value>
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:23:15</sys_created_on>
-        <sys_id>ba8da23fdbe863007c857fcfbf961932</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:23:39</sys_updated_on>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>041273aa1b791410324d8734ec4bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Vendor Instance Checkout Request">2e67a2bbdbe863007c857fcfbf9619d9</workflow_version>
+        <workflow_version display_value="Vendor Instance Checkout Request">8812f76a1b791410324d8734ec4bcbdf</workflow_version>
         <x>35</x>
         <y>450</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=ba8da23fdbe863007c857fcfbf961932"/>
+    <sys_variable_value action="delete_multiple" query="document_key=041273aa1b791410324d8734ec4bcb08"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>ba8da23fdbe863007c857fcfbf961932</document_key>
+        <document_key>041273aa1b791410324d8734ec4bcb08</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:23:15</sys_created_on>
-        <sys_id>769da23fdbe863007c857fcfbf961941</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>881273aa1b791410324d8734ec4bcb08</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:23:15</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>rejected</value>
         <variable display_value="">50ab35f70a6a803f76d36e1ebaf3639e</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>ba8da23fdbe863007c857fcfbf961932</document_key>
+        <document_key>041273aa1b791410324d8734ec4bcb08</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:23:15</sys_created_on>
-        <sys_id>769da23fdbe863007c857fcfbf961941</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>881273aa1b791410324d8734ec4bcb08</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:23:15</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>rejected</value>
         <variable display_value="">50ab35f70a6a803f76d36e1ebaf3639e</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Set Rejected">ba8da23fdbe863007c857fcfbf961932</activity>
+        <activity display_value="Set Rejected">041273aa1b791410324d8734ec4bcb08</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -1251,12 +1251,12 @@ answer = 0;</value>
         <order>0</order>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:23:15</sys_created_on>
-        <sys_id>3e9da23fdbe863007c857fcfbf961941</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>001273aa1b791410324d8734ec4bcb09</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:23:15</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
@@ -1273,59 +1273,59 @@ answer = 0;</value>
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:04:11</sys_created_on>
-        <sys_id>eaf7eabbdbe863007c857fcfbf96198c</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:46:59</sys_updated_on>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c41273aa1b791410324d8734ec4bcb09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Vendor Instance Checkout Request">2e67a2bbdbe863007c857fcfbf9619d9</workflow_version>
+        <workflow_version display_value="Vendor Instance Checkout Request">8812f76a1b791410324d8734ec4bcbdf</workflow_version>
         <x>26</x>
         <y>115</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=eaf7eabbdbe863007c857fcfbf96198c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=c41273aa1b791410324d8734ec4bcb09"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>eaf7eabbdbe863007c857fcfbf96198c</document_key>
+        <document_key>c41273aa1b791410324d8734ec4bcb09</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:04:11</sys_created_on>
-        <sys_id>1f39e6f7dba863007c857fcfbf961943</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>001273aa1b791410324d8734ec4bcb0a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:04:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>1</value>
         <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>eaf7eabbdbe863007c857fcfbf96198c</document_key>
+        <document_key>c41273aa1b791410324d8734ec4bcb09</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:04:11</sys_created_on>
-        <sys_id>9339e6f7dba863007c857fcfbf961943</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4c1273aa1b791410324d8734ec4bcb09</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:04:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>eaf7eabbdbe863007c857fcfbf96198c</document_key>
+        <document_key>c41273aa1b791410324d8734ec4bcb09</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:04:11</sys_created_on>
-        <sys_id>df39e6f7dba863007c857fcfbf961943</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c01273aa1b791410324d8734ec4bcb0a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:04:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>answer = isAvailable();&#13;
 &#13;
 function isAvailable() {&#13;
@@ -1339,43 +1339,43 @@ function isAvailable() {&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>eaf7eabbdbe863007c857fcfbf96198c</document_key>
+        <document_key>c41273aa1b791410324d8734ec4bcb09</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:04:11</sys_created_on>
-        <sys_id>9339e6f7dba863007c857fcfbf961943</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4c1273aa1b791410324d8734ec4bcb09</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:04:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>eaf7eabbdbe863007c857fcfbf96198c</document_key>
+        <document_key>c41273aa1b791410324d8734ec4bcb09</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:04:11</sys_created_on>
-        <sys_id>1f39e6f7dba863007c857fcfbf961943</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>001273aa1b791410324d8734ec4bcb0a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:04:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>1</value>
         <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>eaf7eabbdbe863007c857fcfbf96198c</document_key>
+        <document_key>c41273aa1b791410324d8734ec4bcb09</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:04:11</sys_created_on>
-        <sys_id>df39e6f7dba863007c857fcfbf961943</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c01273aa1b791410324d8734ec4bcb0a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:04:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>answer = isAvailable();&#13;
 &#13;
 function isAvailable() {&#13;
@@ -1388,7 +1388,7 @@ function isAvailable() {&#13;
         <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Vendor Instance Available">eaf7eabbdbe863007c857fcfbf96198c</activity>
+        <activity display_value="Vendor Instance Available">c41273aa1b791410324d8734ec4bcb09</activity>
         <condition>activity.result == 'no'</condition>
         <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
         <condition_type>standard</condition_type>
@@ -1401,15 +1401,15 @@ function isAvailable() {&#13;
         <order>200</order>
         <short_description/>
         <skip_during_generate>true</skip_during_generate>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:04:11</sys_created_on>
-        <sys_id>5b39e6f7dba863007c857fcfbf961944</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>481273aa1b791410324d8734ec4bcb0a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:04:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
     </wf_condition>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Vendor Instance Available">eaf7eabbdbe863007c857fcfbf96198c</activity>
+        <activity display_value="Vendor Instance Available">c41273aa1b791410324d8734ec4bcb09</activity>
         <condition>activity.result == 'yes'</condition>
         <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
         <condition_type>standard</condition_type>
@@ -1422,12 +1422,12 @@ function isAvailable() {&#13;
         <order>100</order>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:04:11</sys_created_on>
-        <sys_id>d739e6f7dba863007c857fcfbf961944</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c81273aa1b791410324d8734ec4bcb0a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:04:11</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Approval - User">35433da80a0a029a0028c639a1e51eb4</activity_definition>
@@ -1444,74 +1444,256 @@ function isAvailable() {&#13;
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>13cc223fdbe863007c857fcfbf9619a7</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:23:31</sys_updated_on>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>cc12f76a1b791410324d8734ec4bcbe3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Vendor Instance Checkout Request">2e67a2bbdbe863007c857fcfbf9619d9</workflow_version>
+        <workflow_version display_value="Vendor Instance Checkout Request">8812f76a1b791410324d8734ec4bcbdf</workflow_version>
         <x>28</x>
         <y>338</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=13cc223fdbe863007c857fcfbf9619a7"/>
+    <sys_variable_value action="delete_multiple" query="document_key=cc12f76a1b791410324d8734ec4bcbe3"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>001233aa1b791410324d8734ec4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="">e863e3b80a0004f911d67787e77e0f16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>041233aa1b791410324d8734ec4bcbfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a7781cb6c0a80066147dc7a5244d5d16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>0412f76a1b791410324d8734ec4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="">e846198f0a0004f91fba434a514ba8b8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>081233aa1b791410324d8734ec4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>any</value>
+        <variable display_value="">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>2000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>0812f76a1b791410324d8734ec4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">02ca01820a0a0b261cf923fb95f5e1d0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>1120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>0c1233aa1b791410324d8734ec4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="">a76c6257c0a8006645cff43883470e64</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>115</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>401233aa1b791410324d8734ec4bcbfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a76680b9c0a8006661b107d0f21fae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>1330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4012f76a1b791410324d8734ec4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">02c618170a0a0b26436f5c2c9f7a3901</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>104</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>441233aa1b791410324d8734ec4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">e37a96e80a0004f978b47d2d6c5e0b22</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4412f76a1b791410324d8734ec4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a77191a4c0a800662b403f7dff5f1bbd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>481233aa1b791410324d8734ec4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">4485eef70a6a803f6bc4bafa9e999640</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4c1233aa1b791410324d8734ec4bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>${vendor_instance.manager}</value>
+        <variable display_value="">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>801233aa1b791410324d8734ec4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="">a7754e91c0a800664938d0ef6d2664d7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>1110</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>325d6e7fdbe863007c857fcfbf961941</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>841233aa1b791410324d8734ec4bcbfc</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">a769a182c0a8006629db7fa3fc2a863d</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>1360</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>365d6e7fdbe863007c857fcfbf961940</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>881233aa1b791410324d8734ec4bcbfb</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>// Set 'answer' to the number of seconds this timer should wait&#13;
 answer = 0;</value>
         <variable display_value="">a782cde9c0a8006608f39abdd85c8395</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>1330</order>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>120</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>3a5d6e7fdbe863007c857fcfbf96193f</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>8812f76a1b791410324d8734ec4bcbe5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
-        <variable display_value="">02c618170a0a0b26436f5c2c9f7a3901</variable>
+        <variable display_value="">a77903a7c0a8006641af7c9b1d34444e</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>2050</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>3a5d6e7fdbe863007c857fcfbf961942</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>8c1233aa1b791410324d8734ec4bcbfd</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&#13;
 //&#13;
 // For example:&#13;
@@ -1523,127 +1705,71 @@ answer = 0;</value>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>900</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>3e5d6e7fdbe863007c857fcfbf961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
-        <variable display_value="">a7754e91c0a800664938d0ef6d2664d7</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>2000</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>725d623fdbe863007c857fcfbf96192a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>0</value>
-        <variable display_value="">02ca01820a0a0b261cf923fb95f5e1d0</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>120</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>725d6e7fdbe863007c857fcfbf961940</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a77903a7c0a8006641af7c9b1d34444e</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>1200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>765d6e7fdbe863007c857fcfbf96193f</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>8c12f76a1b791410324d8734ec4bcbe4</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">a775f59ac0a8006665d72362ae687035</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>900</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>765d6e7fdbe863007c857fcfbf961942</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a774138dc0a80066000be7af20961c7d</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>1150</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>7a5d6e7fdbe863007c857fcfbf961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a76b8c6ec0a800664bb14d5d8b9cd7c4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>110</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>7e5d623fdbe863007c857fcfbf961929</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a77191a4c0a800662b403f7dff5f1bbd</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>310</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>7e5d6e7fdbe863007c857fcfbf961940</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c01233aa1b791410324d8734ec4bcbfc</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>reject</value>
         <variable display_value="">502163410a6a803f0356332b24dc7945</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>103</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c412f76a1b791410324d8734ec4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">e37b77ac0a0004f973283ad13b341c5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c81233aa1b791410324d8734ec4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a774138dc0a80066000be7af20961c7d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>1370</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>b25d6e7fdbe863007c857fcfbf96193f</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c812f76a1b791410324d8734ec4bcbe4</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval.  When called, the following information is available:&#13;
 //&#13;
 //    counts.total = total number of users that are part of this approval&#13;
@@ -1658,436 +1784,310 @@ answer = 0;</value>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>b25d6e7fdbe863007c857fcfbf961942</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>any</value>
-        <variable display_value="">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>1120</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>b65d6e7fdbe863007c857fcfbf961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
-        <variable display_value="">a76c6257c0a8006645cff43883470e64</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>330</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>ba5d6e7fdbe863007c857fcfbf961940</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>approval_history</value>
-        <variable display_value="">e863e3b80a0004f911d67787e77e0f16</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>103</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>be5d6e7fdbe863007c857fcfbf96193f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">e37b77ac0a0004f973283ad13b341c5b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>1200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>be5d6e7fdbe863007c857fcfbf961942</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a7781cb6c0a80066147dc7a5244d5d16</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>50</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>f25d6e7fdbe863007c857fcfbf961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">4485eef70a6a803f6bc4bafa9e999640</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>f65d6e7fdbe863007c857fcfbf961940</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>${vendor_instance.manager}</value>
-        <variable display_value="">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>101</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>fa5d6e7fdbe863007c857fcfbf96193f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>approval</value>
-        <variable display_value="">e846198f0a0004f91fba434a514ba8b8</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>115</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>fa5d6e7fdbe863007c857fcfbf961942</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a76680b9c0a8006661b107d0f21fae67</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>104</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>fe5d6e7fdbe863007c857fcfbf961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">e37a96e80a0004f978b47d2d6c5e0b22</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>50</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>f25d6e7fdbe863007c857fcfbf961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">4485eef70a6a803f6bc4bafa9e999640</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>b25d6e7fdbe863007c857fcfbf961942</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>any</value>
-        <variable display_value="">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>101</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>fa5d6e7fdbe863007c857fcfbf96193f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>approval</value>
-        <variable display_value="">e846198f0a0004f91fba434a514ba8b8</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>103</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>be5d6e7fdbe863007c857fcfbf96193f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">e37b77ac0a0004f973283ad13b341c5b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>104</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>fe5d6e7fdbe863007c857fcfbf961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">e37a96e80a0004f978b47d2d6c5e0b22</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>110</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>7e5d623fdbe863007c857fcfbf961929</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a77191a4c0a800662b403f7dff5f1bbd</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>115</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>fa5d6e7fdbe863007c857fcfbf961942</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a76680b9c0a8006661b107d0f21fae67</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>120</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>725d6e7fdbe863007c857fcfbf961940</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a77903a7c0a8006641af7c9b1d34444e</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>f65d6e7fdbe863007c857fcfbf961940</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>${vendor_instance.manager}</value>
-        <variable display_value="">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>310</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>7e5d6e7fdbe863007c857fcfbf961940</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>reject</value>
-        <variable display_value="">502163410a6a803f0356332b24dc7945</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>330</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>ba5d6e7fdbe863007c857fcfbf961940</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>approval_history</value>
-        <variable display_value="">e863e3b80a0004f911d67787e77e0f16</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>900</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>765d6e7fdbe863007c857fcfbf961942</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a774138dc0a80066000be7af20961c7d</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>900</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>3e5d6e7fdbe863007c857fcfbf961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
-        <variable display_value="">a7754e91c0a800664938d0ef6d2664d7</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>1110</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>325d6e7fdbe863007c857fcfbf961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value/>
-        <variable display_value="">a769a182c0a8006629db7fa3fc2a863d</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>1120</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>b65d6e7fdbe863007c857fcfbf961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
-        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
-        <variable display_value="">a76c6257c0a8006645cff43883470e64</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>1150</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>7a5d6e7fdbe863007c857fcfbf961941</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>cc1233aa1b791410324d8734ec4bcbfc</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">a76b8c6ec0a800664bb14d5d8b9cd7c4</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
-        <order>1200</order>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>50</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>765d6e7fdbe863007c857fcfbf96193f</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>481233aa1b791410324d8734ec4bcbfc</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
-        <variable display_value="">a775f59ac0a8006665d72362ae687035</variable>
+        <variable display_value="">4485eef70a6a803f6bc4bafa9e999640</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>081233aa1b791410324d8734ec4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>any</value>
+        <variable display_value="">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>0412f76a1b791410324d8734ec4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="">e846198f0a0004f91fba434a514ba8b8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>103</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c412f76a1b791410324d8734ec4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">e37b77ac0a0004f973283ad13b341c5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>104</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>441233aa1b791410324d8734ec4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">e37a96e80a0004f978b47d2d6c5e0b22</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4412f76a1b791410324d8734ec4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a77191a4c0a800662b403f7dff5f1bbd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>115</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>401233aa1b791410324d8734ec4bcbfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a76680b9c0a8006661b107d0f21fae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>8812f76a1b791410324d8734ec4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a77903a7c0a8006641af7c9b1d34444e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4c1233aa1b791410324d8734ec4bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>${vendor_instance.manager}</value>
+        <variable display_value="">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c01233aa1b791410324d8734ec4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>reject</value>
+        <variable display_value="">502163410a6a803f0356332b24dc7945</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>001233aa1b791410324d8734ec4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="">e863e3b80a0004f911d67787e77e0f16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>801233aa1b791410324d8734ec4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="">a7754e91c0a800664938d0ef6d2664d7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c81233aa1b791410324d8734ec4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a774138dc0a80066000be7af20961c7d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>1110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>841233aa1b791410324d8734ec4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a769a182c0a8006629db7fa3fc2a863d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>1120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>0c1233aa1b791410324d8734ec4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="">a76c6257c0a8006645cff43883470e64</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>1150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>cc1233aa1b791410324d8734ec4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a76b8c6ec0a800664bb14d5d8b9cd7c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>1200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>be5d6e7fdbe863007c857fcfbf961942</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>041233aa1b791410324d8734ec4bcbfe</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">a7781cb6c0a80066147dc7a5244d5d16</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>8c12f76a1b791410324d8734ec4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a775f59ac0a8006665d72362ae687035</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>1330</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>3a5d6e7fdbe863007c857fcfbf96193f</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4012f76a1b791410324d8734ec4bcbe5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value/>
         <variable display_value="">02c618170a0a0b26436f5c2c9f7a3901</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>1360</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>365d6e7fdbe863007c857fcfbf961940</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>881233aa1b791410324d8734ec4bcbfb</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>// Set 'answer' to the number of seconds this timer should wait&#13;
 answer = 0;</value>
         <variable display_value="">a782cde9c0a8006608f39abdd85c8395</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>1370</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>b25d6e7fdbe863007c857fcfbf96193f</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c812f76a1b791410324d8734ec4bcbe4</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval.  When called, the following information is available:&#13;
 //&#13;
 //    counts.total = total number of users that are part of this approval&#13;
@@ -2102,29 +2102,29 @@ answer = 0;</value>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>2000</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>725d623fdbe863007c857fcfbf96192a</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>0812f76a1b791410324d8734ec4bcbe4</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>0</value>
         <variable display_value="">02ca01820a0a0b261cf923fb95f5e1d0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>13cc223fdbe863007c857fcfbf9619a7</document_key>
+        <document_key>cc12f76a1b791410324d8734ec4bcbe3</document_key>
         <order>2050</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>3a5d6e7fdbe863007c857fcfbf961942</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>8c1233aa1b791410324d8734ec4bcbfd</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
         <value>// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&#13;
 //&#13;
 // For example:&#13;
@@ -2135,7 +2135,7 @@ answer = 0;</value>
         <variable display_value="">c35e582f0a0a0ba96248a70985207e63</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Vendor Instance Manager Approval">13cc223fdbe863007c857fcfbf9619a7</activity>
+        <activity display_value="Vendor Instance Manager Approval">cc12f76a1b791410324d8734ec4bcbe3</activity>
         <condition>activity.result == 'approved' || activity.result == 'skipped'</condition>
         <condition_default display_value="Approved">586e1fa60a0a0b5c008121ab894f2b06</condition_default>
         <condition_type>standard</condition_type>
@@ -2148,15 +2148,15 @@ answer = 0;</value>
         <order>1</order>
         <short_description>Approval request was approved</short_description>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>b65d6e7fdbe863007c857fcfbf961943</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>0c1233aa1b791410324d8734ec4bcbfe</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
     </wf_condition>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Vendor Instance Manager Approval">13cc223fdbe863007c857fcfbf9619a7</activity>
+        <activity display_value="Vendor Instance Manager Approval">cc12f76a1b791410324d8734ec4bcbe3</activity>
         <condition>activity.result == 'rejected'</condition>
         <condition_default display_value="Rejected">586e4ef60a0a0b5c00440b56c014c8a5</condition_default>
         <condition_type>standard</condition_type>
@@ -2169,147 +2169,147 @@ answer = 0;</value>
         <order>2</order>
         <short_description>Approval request was rejected</short_description>
         <skip_during_generate>true</skip_during_generate>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:10</sys_created_on>
-        <sys_id>3a5d6e7fdbe863007c857fcfbf961943</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>881233aa1b791410324d8734ec4bcbfe</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:10</sys_updated_on>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
     </wf_condition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Approved">b65d6e7fdbe863007c857fcfbf961943</condition>
-        <from display_value="Vendor Instance Manager Approval">13cc223fdbe863007c857fcfbf9619a7</from>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:23</sys_created_on>
-        <sys_id>007236ffdbe863007c857fcfbf96194c</sys_id>
+        <condition display_value="Always">c81233aa1b791410324d8734ec4bcbff</condition>
+        <from display_value="Begin">801233aa1b791410324d8734ec4bcbff</from>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>001273aa1b791410324d8734ec4bcb0e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:23</sys_updated_on>
-        <to display_value="Resolve Vendor Instance Checkout Conflicts">39707e7fdbe863007c857fcfbf96198f</to>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <to display_value="Vendor Instance Available">c41273aa1b791410324d8734ec4bcb09</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">1b99e6fbdbe863007c857fcfbf9619a8</condition>
-        <from display_value="Create Vendor Instance Checkout">b959e6bbdbe863007c857fcfbf961957</from>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:05:53</sys_created_on>
-        <sys_id>0ca9a6f7dba863007c857fcfbf96191b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:09:10</sys_updated_on>
-        <to display_value="Set Closed">614aeafbdbe863007c857fcfbf961900</to>
-    </wf_transition>
-    <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Yes">d739e6f7dba863007c857fcfbf961944</condition>
-        <from display_value="Vendor Instance Available">eaf7eabbdbe863007c857fcfbf96198c</from>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:04:16</sys_created_on>
-        <sys_id>1049ae7bdbe863007c857fcfbf9619e5</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:05:53</sys_updated_on>
-        <to display_value="Create Vendor Instance Checkout">b959e6bbdbe863007c857fcfbf961957</to>
-    </wf_transition>
-    <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">9aed623fdbe863007c857fcfbf961993</condition>
-        <from display_value="Set Closed Incomplete">08cde67fdbe863007c857fcfbf96196e</from>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:24:49</sys_created_on>
-        <sys_id>25fdee7fdbe863007c857fcfbf96191c</sys_id>
+        <condition display_value="Always">001273aa1b791410324d8734ec4bcb09</condition>
+        <from display_value="Set Rejected">041273aa1b791410324d8734ec4bcb08</from>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>041273aa1b791410324d8734ec4bcb0d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:24:49</sys_updated_on>
-        <to display_value="End">2ec7a2bbdbe863007c857fcfbf96196f</to>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <to display_value="Set Closed Incomplete">0012f76a1b791410324d8734ec4bcbe2</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="No">5b39e6f7dba863007c857fcfbf961944</condition>
-        <from display_value="Vendor Instance Available">eaf7eabbdbe863007c857fcfbf96198c</from>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:19:09</sys_created_on>
-        <sys_id>26ac6abbdbe863007c857fcfbf961903</sys_id>
+        <condition display_value="Always">081273aa1b791410324d8734ec4bcb0b</condition>
+        <from display_value="Set Approval Requested">801273aa1b791410324d8734ec4bcb0b</from>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>401273aa1b791410324d8734ec4bcb0d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:19:09</sys_updated_on>
-        <to display_value="Set Approval Requested">fa8c6abbdbe863007c857fcfbf961960</to>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <to display_value="Vendor Instance Manager Approval">cc12f76a1b791410324d8734ec4bcbe3</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">556236ffdbe863007c857fcfbf96190f</condition>
-        <from display_value="Resolve Vendor Instance Checkout Conflicts">39707e7fdbe863007c857fcfbf96198f</from>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:44:29</sys_created_on>
-        <sys_id>6172b2bfdbe863007c857fcfbf9619a9</sys_id>
+        <condition display_value="Yes">c81273aa1b791410324d8734ec4bcb0a</condition>
+        <from display_value="Vendor Instance Available">c41273aa1b791410324d8734ec4bcb09</from>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>481273aa1b791410324d8734ec4bcb0e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:44:29</sys_updated_on>
-        <to display_value="Create Vendor Instance Checkout">b959e6bbdbe863007c857fcfbf961957</to>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <to display_value="Create Vendor Instance Checkout">401273aa1b791410324d8734ec4bcb07</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Rejected">3a5d6e7fdbe863007c857fcfbf961943</condition>
-        <from display_value="Vendor Instance Manager Approval">13cc223fdbe863007c857fcfbf9619a7</from>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:23:25</sys_created_on>
-        <sys_id>74ad22bfdbe863007c857fcfbf961936</sys_id>
+        <condition display_value="Always">4412f76a1b791410324d8734ec4bcbe3</condition>
+        <from display_value="Set Closed Incomplete">0012f76a1b791410324d8734ec4bcbe2</from>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4c1273aa1b791410324d8734ec4bcb0c</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:23:25</sys_updated_on>
-        <to display_value="Set Rejected">ba8da23fdbe863007c857fcfbf961932</to>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <to display_value="End">401273aa1b791410324d8734ec4bcb00</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">5b5a623fdbe863007c857fcfbf9619fe</condition>
-        <from display_value="Set Closed">614aeafbdbe863007c857fcfbf961900</from>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:09:10</sys_created_on>
-        <sys_id>886aaafbdbe863007c857fcfbf96199e</sys_id>
+        <condition display_value="Rejected">881233aa1b791410324d8734ec4bcbfe</condition>
+        <from display_value="Vendor Instance Manager Approval">cc12f76a1b791410324d8734ec4bcbe3</from>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4c1273aa1b791410324d8734ec4bcb0d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:09:10</sys_updated_on>
-        <to display_value="End">2ec7a2bbdbe863007c857fcfbf96196f</to>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <to display_value="Set Rejected">041273aa1b791410324d8734ec4bcb08</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">3e9da23fdbe863007c857fcfbf961941</condition>
-        <from display_value="Set Rejected">ba8da23fdbe863007c857fcfbf961932</from>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:24:45</sys_created_on>
-        <sys_id>94fd2a7fdbe863007c857fcfbf96193a</sys_id>
+        <condition display_value="Always">4c1273aa1b791410324d8734ec4bcb07</condition>
+        <from display_value="Create Vendor Instance Checkout">401273aa1b791410324d8734ec4bcb07</from>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>841273aa1b791410324d8734ec4bcb0e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:24:45</sys_updated_on>
-        <to display_value="Set Closed Incomplete">08cde67fdbe863007c857fcfbf96196e</to>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <to display_value="Set Closed">041273aa1b791410324d8734ec4bcb06</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">3cac623fdbe863007c857fcfbf961990</condition>
-        <from display_value="Set Approval Requested">fa8c6abbdbe863007c857fcfbf961960</from>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 19:22:18</sys_created_on>
-        <sys_id>a46d2a7fdbe863007c857fcfbf961937</sys_id>
+        <condition display_value="Always">881273aa1b791410324d8734ec4bcb06</condition>
+        <from display_value="Set Closed">041273aa1b791410324d8734ec4bcb06</from>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c01273aa1b791410324d8734ec4bcb0e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:22:18</sys_updated_on>
-        <to display_value="Vendor Instance Manager Approval">13cc223fdbe863007c857fcfbf9619a7</to>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <to display_value="End">401273aa1b791410324d8734ec4bcb00</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">a2c7a2bbdbe863007c857fcfbf96196f</condition>
-        <from display_value="Begin">26c7a2bbdbe863007c857fcfbf96196e</from>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 18:57:51</sys_created_on>
-        <sys_id>e2c7a2bbdbe863007c857fcfbf961970</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 19:04:16</sys_updated_on>
-        <to display_value="Vendor Instance Available">eaf7eabbdbe863007c857fcfbf96198c</to>
+        <condition display_value="Always">4c1273aa1b791410324d8734ec4bcb05</condition>
+        <from display_value="Resolve Vendor Instance Checkout Conflicts">cc1273aa1b791410324d8734ec4bcb00</from>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c41273aa1b791410324d8734ec4bcb0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <to display_value="Create Vendor Instance Checkout">401273aa1b791410324d8734ec4bcb07</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Approved">0c1233aa1b791410324d8734ec4bcbfe</condition>
+        <from display_value="Vendor Instance Manager Approval">cc12f76a1b791410324d8734ec4bcbe3</from>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c81273aa1b791410324d8734ec4bcb0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <to display_value="Resolve Vendor Instance Checkout Conflicts">cc1273aa1b791410324d8734ec4bcb00</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="No">481273aa1b791410324d8734ec4bcb0a</condition>
+        <from display_value="Vendor Instance Available">c41273aa1b791410324d8734ec4bcb09</from>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>c81273aa1b791410324d8734ec4bcb0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <to display_value="Set Approval Requested">801273aa1b791410324d8734ec4bcb0b</to>
     </wf_transition>
     <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
         <estimated_run_time/>
         <no_of_data_points>1</no_of_data_points>
         <percentage_threshold_ert>20</percentage_threshold_ert>
-        <sys_created_by>robert.polickoski</sys_created_by>
-        <sys_created_on>2018-09-21 18:57:50</sys_created_on>
-        <sys_id>5ec7a2bbdbe863007c857fcfbf96196b</sys_id>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:53</sys_created_on>
+        <sys_id>4c12f76a1b791410324d8734ec4bcbdf</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>robert.polickoski</sys_updated_by>
-        <sys_updated_on>2018-09-21 18:57:50</sys_updated_on>
-        <workflow_version display_value="Vendor Instance Checkout Request">2e67a2bbdbe863007c857fcfbf9619d9</workflow_version>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-07 19:01:53</sys_updated_on>
+        <workflow_version display_value="Vendor Instance Checkout Request">8812f76a1b791410324d8734ec4bcbdf</workflow_version>
     </wf_estimated_runtime_config>
-    <wf_workflow_version action="update_multiple" query="workflow=e2c7a2bbdbe863007c857fcfbf96196d^sys_id!=2e67a2bbdbe863007c857fcfbf9619d9">
+    <wf_workflow_version action="update_multiple" query="workflow=e2c7a2bbdbe863007c857fcfbf96196d^sys_id!=8812f76a1b791410324d8734ec4bcbdf">
         <published>false</published>
     </wf_workflow_version>
 </record_update>
