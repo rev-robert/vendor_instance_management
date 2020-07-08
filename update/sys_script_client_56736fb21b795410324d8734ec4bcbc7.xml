@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>admin_password</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Field Message on Admin Password Change</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    g_form.showFieldMsg('admin_password', 'For security purposes the Admin Password is obscured.  Please be sure that the new password is recorded in a secured location.', 'info');
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-08 12:42:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>56736fb21b795410324d8734ec4bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Field Message on Admin Password Change</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_update_name>sys_script_client_56736fb21b795410324d8734ec4bcbc7</sys_update_name>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-08 12:42:55</sys_updated_on>
+        <table>x_275826_vim_vendor_instance</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

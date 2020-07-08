@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Logs an Admin Password Change to Instance Notes just  in case it isn't recorded elsewhere</description>
+        <field>admin_password</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Log Admin Password Change to Instance No</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        var txtInstanceNotes = g_form.getValue('instance_notes');
+        txtInstanceNotes += '\n' + 'Admin Password Updated to ' + g_form.getValue('admin_password');
+        g_form.setValue('instance_notes', txtInstanceNotes);
+        return;
+    }
+
+    //Type appropriate comment here, and begin script below
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-08 12:26:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>16206bfe1b395410324d8734ec4bcb6e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Log Admin Password Change to Instance No</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_update_name>sys_script_client_16206bfe1b395410324d8734ec4bcb6e</sys_update_name>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-08 12:26:19</sys_updated_on>
+        <table>x_275826_vim_vendor_instance</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</application>
+        <file_path/>
+        <instance_id>37178475db2e76c08264f70fbf96195f</instance_id>
+        <instance_name>totalcaredev</instance_name>
+        <name>sys_script_client_16206bfe1b395410324d8734ec4bcb6e</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Logs an Admin Password Change to Instance Notes just  in case it isn't recorded elsewhere&lt;/description&gt;&lt;field&gt;admin_password&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Log Admin Password Change to Instance No&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        var txtInstanceNotes = g_form.getValue('instance_notes');
+        txtInstanceNotes += '\n' + 'Admin Password Updated to ' + g_form.getValue('admin_password');
+        g_form.setValue('instance_notes', txtInstanceNotes);
+        return;
+    }
+
+    //Type appropriate comment here, and begin script below
+
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;rpolicko&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-07-08 12:26:02&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;16206bfe1b395410324d8734ec4bcb6e&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Log Admin Password Change to Instance No&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Vendor Instance Management" source="x_275826_vim"&gt;84d3492bdbac23007c857fcfbf96199e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Vendor Instance Management"&gt;84d3492bdbac23007c857fcfbf96199e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_16206bfe1b395410324d8734ec4bcb6e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;rpolicko&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-07-08 12:26:19&lt;/sys_updated_on&gt;&lt;table&gt;x_275826_vim_vendor_instance&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1263294472</payload_hash>
+        <record_name>Log Admin Password Change to Instance No</record_name>
+        <reverted_from/>
+        <source>8e3c6e1d1b559054775d7445cc4bcb85</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-08 12:26:19</sys_created_on>
+        <sys_id>e311a7fe1b395410324d8734ec4bcbaf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1732e641da20000001</sys_recorded_at>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-08 12:26:19</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>2b11a7fe7139541068ac62697b6503ae</update_guid>
+        <update_guid_history>2b11a7fe7139541068ac62697b6503ae:-1263294472,df01e7323479541022c1f33fc7a6897b:504902276</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rpolicko</sys_created_by>
+        <sys_created_on>2020-07-08 12:36:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>4804c9f6708340629982be1d9d9e96c4</sys_id>
+        <sys_metadata>16206bfe1b395410324d8734ec4bcb6e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Log Admin Password Change to Instance No</sys_name>
+        <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
+        <sys_parent display_value="Vendor Instance">3eb5496bdbac23007c857fcfbf9619b5</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
+        <sys_scope_delete display_value="">4ff01e4fa9df45009bf40b14a04ed890</sys_scope_delete>
+        <sys_update_name>sys_script_client_16206bfe1b395410324d8734ec4bcb6e</sys_update_name>
+        <sys_update_version display_value="sys_script_client_16206bfe1b395410324d8734ec4bcb6e">e311a7fe1b395410324d8734ec4bcbaf</sys_update_version>
+        <sys_updated_by>rpolicko</sys_updated_by>
+        <sys_updated_on>2020-07-08 12:36:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -20,8 +20,8 @@
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Log Admin Password to Work Notes</name>
-        <order>500</order>
+        <name>Log Admin Password Change</name>
+        <order>100</order>
         <priority>100</priority>
         <rest_method/>
         <rest_method_text/>
@@ -31,30 +31,30 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	var txtWorkNotes = current.instance_notes;
-	txtWorkNotes += '\n' + 'Admin Password updated to ' + current.admin_password;
-	current.instance_notes = txtWorkNotes;
+	var txtInstanceNotes = current.instance_notes;
+	txtInstanceNotes += '\n' + 'The Admin Password was updated by ' +gs.getUser().getDisplayName();
+	current.instance_notes = txtInstanceNotes;
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>rpolicko</sys_created_by>
-        <sys_created_on>2020-07-08 12:15:33</sys_created_on>
+        <sys_created_on>2020-07-08 12:46:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>50ad9b3e1b395410324d8734ec4bcb64</sys_id>
+        <sys_id>06f4a7361b795410324d8734ec4bcb18</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_name>Log Admin Password to Work Notes</sys_name>
+        <sys_name>Log Admin Password Change</sys_name>
         <sys_overrides/>
         <sys_package display_value="Vendor Instance Management" source="x_275826_vim">84d3492bdbac23007c857fcfbf96199e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Vendor Instance Management">84d3492bdbac23007c857fcfbf96199e</sys_scope>
-        <sys_update_name>sys_script_50ad9b3e1b395410324d8734ec4bcb64</sys_update_name>
+        <sys_update_name>sys_script_06f4a7361b795410324d8734ec4bcb18</sys_update_name>
         <sys_updated_by>rpolicko</sys_updated_by>
-        <sys_updated_on>2020-07-08 12:19:39</sys_updated_on>
+        <sys_updated_on>2020-07-08 12:47:15</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=50ad9b3e1b395410324d8734ec4bcb64"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=06f4a7361b795410324d8734ec4bcb18"/>
 </record_update>
