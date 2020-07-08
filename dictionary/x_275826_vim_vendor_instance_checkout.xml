@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Vendor Instance Checkout" max_length="40" name="x_275826_vim_vendor_instance_checkout" sizeclass="33" type="collection">
+    <element label="Vendor Instance Checkout" max_length="40" name="x_275826_vim_vendor_instance_checkout" sizeclass="1" type="collection">
         <element label="Checkin date" max_length="40" name="checkin_date" type="glide_date_time"/>
         <element default="javascript:gs.nowDateTime();" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Checkout date" mandatory="true" max_length="40" name="checkout_date" type="glide_date_time" use_dynamic_default="true"/>
         <element display="true" label="Display" max_length="128" name="display" read_only="true" type="string"/>
